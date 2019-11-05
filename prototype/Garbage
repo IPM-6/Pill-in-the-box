@@ -1,0 +1,87 @@
+document.addEventListener('DOMContentLoaded', function () {
+
+                var tabs = document.querySelectorAll('.tabs');
+                var tab_options = null;
+                var tab_instance = M.Tabs.init(tabs, tab_options);
+
+                var date = document.querySelectorAll('.datepicker');
+                var date_options = {
+                    i18n: {
+                        months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                        monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                        weekdays: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabádo'],
+                        weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+                        weekdaysAbbrev: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+                        today: 'Hoje',
+                        clear: 'Limpar',
+                        cancel: 'Sair',
+                        done: 'Confirmar',
+                        labelMonthNext: 'Próximo mês',
+                        labelMonthPrev: 'Mês anterior',
+                        labelMonthSelect: 'Selecione um mês',
+                        labelYearSelect: 'Selecione um ano',
+                        selectMonths: true,
+                        selectYears: 15,
+                    },
+                    format: 'dd mmmm yyyy',
+                    container: '#calendary',
+                    minDate: new Date(),
+                    autoClose: true,
+                    position: 'relative',
+                    margin: 0,
+                    display: 'none'
+                }
+                var date_instance = M.Datepicker.init(date, date_options);
+                
+                var elem = document.getElementById("datepicker");
+                var instance = M.Datepicker.getInstance(elem);
+                instance.open();
+
+            });
+            
+                /*
+                 $('.modal').modal-overlay({
+                 display: 'none'
+                 });
+                 */
+            /*
+             $(document).ready(function () {
+             $('.tabs').tabs();
+             $('.datepicker').datepicker();
+             $('.modal').modal({
+             position: 'relative',
+             margin: '0',
+             overflow: 'visible',
+             display: 'none'
+             });
+             /* 
+             /*
+             $('.datepicker').datepicker();
+             /*        
+             $('.modal-overlay').modal-overlay({
+             display: 'none'
+             });
+             $('.modal').modal({
+             position: 'relative',
+             margin: '0'
+             });
+             
+             });
+             var elem = document.querySelectorAll('.datepicker');
+             var instance = M.Datepicker.getInstance(elem);
+             instance.open();
+             */
+
+document.addEventListener('DOMContentLoaded', function () {
+                var tabs = document.querySelectorAll('.tabs');
+                M.Tabs.init(tabs, null);
+
+                var calendar = document.querySelectorAll('datepicker');
+                M.Datepicker.init(calendar, {
+                    format: 'dd mmmm yyyy',
+                    container: '#calendary',
+                    minDate: new Date(),
+                    autoClose: true
+                })
+                
+            });
