@@ -85,3 +85,54 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 
             });
+
+<!--
+                        <div class="row center-align weekdays">
+                            <div class="col s1 offset-s3">Sun</div>
+                            <div class="col s1">Mon</div>
+                            <div class="col s1">Tue</div>
+                            <div class="col s1">Wed</div>
+                            <div class="col s1">Thu</div>
+                            <div class="col s1">Fri</div>
+                            <div class="col s1">Sat</div>
+                        </div>
+                        <div id="days" class="row center-align days">
+
+                        </div>
+                        -->
+
+function renderDate() {
+    //dt.setDate(1);
+    var day = dt.getDay();
+    var today = new Date();
+
+    var endDate = new Date(dt.getFullYear(), dt.getMonth() + 1, 0).getDate();
+    var prevDate = new Date(dt.getFullYear(), dt.getMonth() + 1, 0).getDate();
+
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    document.getElementById("month").innerHTML = months[dt.getMonth()];
+    document.getElementById("date_str").innerHTML = dt.toDateString();
+
+    var cells = "<div class='row'>";
+    cells += "<div class='col s1 offset-s3 prev_date'>" + (prevDate - day + 1) + "</div>";
+    for (var x = day - 1; x > 0; x--) {
+        cells += "<div class='col s1 prev_date'>" + (prevDate - x + 1) + "</div>";
+    }
+    var weekday = day;
+    for (var i = 1; i <= endDate; i++) {
+        if (weekday === 7) {
+            cells += "</div><div class='row'>";
+            cells += "<div class='col s1 offset-s3 ";
+            weekday = 0;
+        } else {
+            cells += "<div class='col s1 ";
+        }
+        if (i === today.getDate() && dt.getDate() === today.getMonth())
+            cells += "today"
+        cells += "'>" + i + "</div>";
+        weekday++;
+    }
+    cells += "</div>";
+    document.getElementById("days").innerHTML = cells;
+}
