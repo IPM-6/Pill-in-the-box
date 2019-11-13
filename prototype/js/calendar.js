@@ -25,7 +25,7 @@ function renderDate() {
         }
         cells += "<td class='";
 
-        if (i === today.getDate() && dt.getMonth() === today.getMonth())
+        if (i === today.getDate() && dt.getMonth() === today.getMonth() && dt.getYear() === today.getYear())
             cells += " today";
         cells += "'>" + i + "</td>";
         weekday++;
