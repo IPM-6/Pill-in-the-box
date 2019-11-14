@@ -310,7 +310,44 @@ and open the template in the editor.
                 </div>
             </div>
             <div id="stock" class="row">Test 2</div>
-            <div id="compras" class="row">Test 3</div>
+            <div id="compras" class="row">
+            	<div id="shoppingList1" class="card-panel large">
+            		<table id="shoppingTable1" class="centered">
+            			<thead>
+            				<tr>
+                                <th>Em falta:</th>
+                                <th>Receita médica:</th>
+                                <th>Preço:</th>
+                                <th>Detalhes:</th>
+                            </tr>
+                            <tbody id="pillsToShop">
+                            	<tr>
+                        		<td>
+                        			<a class="btn-floating btn-medium waves-effect waves-light red">
+                        				<i class="material-icons">add</i>
+                        			</a>
+                        		</td>
+                        	</tr>
+                            </tbody>
+            			</thead>
+            		</table>
+            	</div>
+            	<div id="shoppingList2" class="card-panel large">
+            		<table id="shoppingTable2" class="centered">
+            			<thead>
+            				<tr>
+                                <th>Quase a acabar:</th>
+                                <th>Receita médica:</th>
+                                <th>Preço:</th>
+                                <th>Detalhes:</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pillsRunningOut">
+
+                        </tbody>
+            		</table>	
+            	</div>	
+            </div>
             <div id="calendario" class="row">
                 <div id="calendar" class="card-panel large">
                     <div id="month" class="row valign-wrapper">
