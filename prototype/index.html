@@ -412,7 +412,7 @@ and open the template in the editor.
             <tbody id="pillsToShop">
               <tr>
                 <td>
-                  <a class="btn-floating btn-medium waves-effect waves-light red">
+                  <a class="btn-floating btn-medium waves-effect waves-light red modal-trigger" href="#shopForm1">
                     <i class="material-icons">add</i>
                   </a>
                 </td>
@@ -435,7 +435,53 @@ and open the template in the editor.
 
             </tbody>
           </table>	
-        </div>	
+        </div>
+        <div id="shopForm1" class="modal">
+	        <div class="modal-content">
+	          <form class="col s12">
+	          	<div class="row">
+	          		<b size=12>Preencha as informações necessárias(
+	          			<span class="red-text text-darken-2">*</span>
+					) relativas ao comprimido a comprar:</b>
+	          	</div>			
+	            <div class="row">
+	              <div class="input-field col s3">
+	                <input placeholder="Nome" id="pillName" type="text">
+	                <label for="pillName">Nome do comprimido:
+	                	<span class="red-text text-darken-2">*</span>
+	            	</label>
+	              </div>
+	              <div class="input-field col s3">
+	                <input placeholder="Quantidade" id="pillAmount" type="text">
+	                <label for="pillAmount">Quantidade:
+	                	<span class="red-text text-darken-2">*</span>
+	            	</label>
+	              </div>
+	              <div class="input-field col s3">
+	                <input placeholder="Preço" id="pillPrice" type="text">
+	                <label for="pillPrice">Preço:</label>
+	              </div>
+	            </div>
+	            <div class="row">Sujeito a receita médica?<span class="red-text text-darken-2">*</span>
+	            	<form action="#">
+	            		<p>
+      						<label>
+        						<input id="receipt" type="checkbox" class="filled-in" checked="unchecked"/>
+        						<span>Sim</span>
+      						</label>
+   						 </p>
+	              	</form>
+	              	<!--<button class="btn waves-effect waves-light" type="submit" name="action">Concluído
+    					<i class="material-icons right">send</i>
+  					</button>-->
+	            </div>
+	            <!--<button class="waves-effect grey-text text-darken-4" type="button" onclick="validateForm()">Entrar</button>-->
+	            <a class="modal-close btn waves-effect waves-light" onclick="validateShopForm()">Concluído
+	            	<i class="material-icons right">send</i>
+	            </a>
+	          </form>
+        	</div>
+      	</div>
       </div>
       <div id="calendario" class="row">
         <div id="calendar" class="card-panel large">
@@ -518,6 +564,19 @@ and open the template in the editor.
       month = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto",
         "Setembro", "Outubro", "Novembro", "Dezembro"];
       document.getElementById("date").innerHTML = d + " de " + month[m] + " de " + y;
+    </script>
+    <script>
+    	function validateShopForm() {
+    		var pillName = document.getElementById("pillName").value;
+    		var pillAmount = document.getElementById("pillAmount").value;
+    		var medicReceipt = document.getElementById("receipt").checked;
+    		if(pillName == null || pillAmount == null || medicReceipt == null) {
+    			alert("Erro: informação necessária não preenchida.");
+    		} else {	
+    			var pillPrice = document.getElementById("pillPrice").value;
+    			this.addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt);
+    		}
+    	}
     </script>
   </body>
 </html>
