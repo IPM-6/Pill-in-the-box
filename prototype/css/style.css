@@ -1,17 +1,29 @@
 .prev_date, .next_date {
-    color: #999;
+  color: #999;
 }
 
 .today {
-    background-color: grey;
-    color: #fff;
+  background-color: grey;
+  color: #fff;
 }
 
 #days td, #days th{
-    height: 100px;
+  height: 100px;
 }
 
 #days td:hover {
-    cursor: pointer;
-    background-color: #dfe6e9
+  cursor: pointer;
+  background-color: #dfe6e9
+}
+
+.list_search ul li {
+  float: left;
+  list-style: none;
+}
+
+.list_search ul li a {
+  display: block;
+  width: 25px;
+  padding: 4px 0;
+  text-align: center;
 }
