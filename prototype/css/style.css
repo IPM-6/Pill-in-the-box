@@ -42,4 +42,7 @@
   text-align: center;
 }
 
-
+.myvalign {
+    display: -webkit-box; 
+    -webkit-box-align: center;
+}
