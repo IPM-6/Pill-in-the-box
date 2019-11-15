@@ -162,6 +162,17 @@ and open the template in the editor.
     <main class="container">
 
       <div id="caixa" class="row">
+          
+          <div class="row">
+              <div class="input-field col s4">
+                  <select>
+                      <option value="hour" selected>Hora</option>
+                      <option value="person">Pessoa</option>
+                  </select>
+                  <label class="flow-text">Organizar por:</label>
+              </div>
+          </div>
+          
         <div class="row valign-wrapper">
           <div class="col s5 left-align">
             <h4>Nome da Caixa</h4>
@@ -175,7 +186,7 @@ and open the template in the editor.
         <div class="row valign-wrapper">
           <div class="col s10">
             <div class="row z-depth-5 center-align">
-              <div class="col s2">
+              <div class="col s3">
                 <div class="card">
                   <span class="card-title">Nome do Comprimido</span>
                   <div class="card-action">
@@ -183,7 +194,7 @@ and open the template in the editor.
                   </div>
                 </div>
               </div>
-              <div class="col s2">
+              <div class="col s3">
                 <div class="card">
                   <span class="card-title">Nome do Comprimido</span>
                   <div class="card-action">
@@ -191,7 +202,7 @@ and open the template in the editor.
                   </div>
                 </div>
               </div>
-              <div class="col s2">
+              <div class="col s3">
                 <div class="card">
                   <span class="card-title">Nome do Comprimido</span>
                   <div class="card-action">
@@ -199,7 +210,7 @@ and open the template in the editor.
                   </div>
                 </div>
               </div>
-              <div class="col s2">
+              <div class="col s3">
                 <div class="card">
                   <span class="card-title">Nome do Comprimido</span>
                   <div class="card-action">
@@ -207,7 +218,7 @@ and open the template in the editor.
                   </div>
                 </div>
               </div>
-              <div class="col s2">
+              <div class="col s3">
                 <br/>
                 <br/>
                 <a href="#!" class="waves-effect grey-text text-darken-4">
@@ -253,7 +264,7 @@ and open the template in the editor.
             <div class="col s10">
               <div class="row z-depth-5 center-align">
 
-                <div class="col s2">
+                <div class="col s3">
                   <div class="card">
                     <span class="card-title">Nome do Comprimido</span>
                     <div class="card-action">
@@ -261,7 +272,7 @@ and open the template in the editor.
                     </div>
                   </div>
                 </div>
-                <div class="col s2">
+                <div class="col s3">
                   <div class="card">
                     <span class="card-title">Nome do Comprimido</span>
                     <div class="card-action">
@@ -269,7 +280,7 @@ and open the template in the editor.
                     </div>
                   </div>
                 </div>
-                <div class="col s2">
+                <div class="col s3">
                   <div class="card">
                     <span class="card-title">Nome do Comprimido</span>
                     <div class="card-action">
@@ -277,7 +288,7 @@ and open the template in the editor.
                     </div>
                   </div>
                 </div>
-                <div class="col s2">
+                <div class="col s3">
                   <br/>
                   <br/>
                   <a href="#!" class="waves-effect grey-text text-darken-4">
@@ -543,6 +554,7 @@ and open the template in the editor.
                     coverTrigger: false
                   });
                   $('.modal').modal();
+                  $('select').formSelect();
                 });
     </script>
     <script>
