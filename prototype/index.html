@@ -162,16 +162,83 @@ and open the template in the editor.
     <main class="container">
 
       <div id="caixa" class="row">
-
-        <div class="row">
-          <div class="input-field col s4">
-            <select>
-              <option value="hour" selected>Hora</option>
-              <option value="person">Pessoa</option>
-            </select>
-            <label class="flow-text">Organizar por:</label>
+          
+          <div class="row valign-wrapper">
+              <div class="input-field col s3">
+                  <select>
+                      <option value="hour" selected>Hora</option>
+                      <option value="person">Pessoa</option>
+                  </select>
+                  <label class="flow-text">Organizar por:</label>
+              </div>
+              <div class="col s6" style="height:110px; overflow:auto;">
+                  <table class="striped" >
+                      <tr>
+                          <td>
+                              <label>
+                                  <input type="checkbox"/>
+                                  <span>Person</span>
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox"/>
+                                  <span>Person</span>
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox"/>
+                                  <span>Person</span>
+                              </label>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <label>
+                                  <input type="checkbox"/>
+                                  <span>Person</span>
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox"/>
+                                  <span>Person</span>
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox"/>
+                                  <span>Person</span>
+                              </label>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <label>
+                                  <input type="checkbox"/>
+                                  <span>Person</span>
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox"/>
+                                  <span>Person</span>
+                              </label>
+                          </td>
+                          <td>
+                              <label>
+                                  <input type="checkbox"/>
+                                  <span>Person</span>
+                              </label>
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+              <div class="col s3">
+                  <a class="btn-medium waves-effect grey-text text-darken-4 waves-light">Entrar</a>
+              </div>
           </div>
-        </div>
 
         <div class="row valign-wrapper">
           <div class="col s5 left-align">
@@ -258,8 +325,7 @@ and open the template in the editor.
           </div>
           <div class="row valign-wrapper">
             <div class="col s10">
-              <div class="row z-depth-5 center-align myvalign">
-
+                <div class="row z-depth-5 center-align">
 
                 <div class="col s3">
                   <div class="card">
@@ -278,9 +344,11 @@ and open the template in the editor.
                   </div>
                 </div>
                 <div class="col s3">
+                    <br/>
                   <a href="#!" class="waves-effect grey-text text-darken-4">
                     <i class="material-icons large">add</i>
                   </a>
+                    <br/>
                 </div>
               </div>
             </div>
