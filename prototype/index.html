@@ -162,83 +162,99 @@ and open the template in the editor.
     <main class="container">
 
       <div id="caixa" class="row">
-          
-          <div class="row valign-wrapper">
-              <div class="input-field col s3">
-                  <select>
-                      <option value="hour" selected>Hora</option>
-                      <option value="person">Pessoa</option>
-                  </select>
-                  <label class="flow-text">Organizar por:</label>
-              </div>
-              <div class="col s6" style="height:110px; overflow:auto;">
-                  <table class="striped" >
-                      <tr>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                      </tr>
-                  </table>
-              </div>
-              <div class="col s3">
-                  <a class="btn-medium waves-effect grey-text text-darken-4 waves-light">Entrar</a>
-              </div>
+
+        <div class="row center-align valign-wrapper">
+          <div class="input-field col s2">
+            <select>
+              <option value="hour" selected>Hora</option>
+              <option value="person">Pessoa</option>
+            </select>
+            <label class="flow-text">Organizar por:</label>
           </div>
+          <div class="col s6">
+            <div class="row valign-wrapper">
+              <div class="col s10" style="height:110px; overflow:auto;">
+                <table class="striped">
+                  <tr>
+                    <td>
+                      <label>
+                        <input type="checkbox"/>
+                        <span>Person</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label>
+                        <input type="checkbox"/>
+                        <span>Person</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label>
+                        <input type="checkbox"/>
+                        <span>Person</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>
+                        <input type="checkbox"/>
+                        <span>Person</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label>
+                        <input type="checkbox"/>
+                        <span>Person</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label>
+                        <input type="checkbox"/>
+                        <span>Person</span>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>
+                        <input type="checkbox"/>
+                        <span>Person</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label>
+                        <input type="checkbox"/>
+                        <span>Person</span>
+                      </label>
+                    </td>
+                    <td>
+                      <label>
+                        <input type="checkbox"/>
+                        <span>Person</span>
+                      </label>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col s2">
+                <a class="btn-floating">
+                  <i class="material-icons">add</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col s3">
+            <br/>
+            <div class="row">
+              <a class="btn waves-effect grey-text text-darken-4 waves-light">Desselecionar Todos</a>
+            </div>
+            <div class="row">
+              <a class="btn waves-effect grey-text text-darken-4 waves-light">Selecionar Todos</a>
+            </div>
+          </div>
+          <br/>
+        </div>
 
         <div class="row valign-wrapper">
           <div class="col s5 left-align">
@@ -325,7 +341,7 @@ and open the template in the editor.
           </div>
           <div class="row valign-wrapper">
             <div class="col s10">
-                <div class="row z-depth-5 center-align">
+              <div class="row z-depth-5 center-align">
 
                 <div class="col s3">
                   <div class="card">
@@ -344,11 +360,11 @@ and open the template in the editor.
                   </div>
                 </div>
                 <div class="col s3">
-                    <br/>
+                  <br/>
                   <a href="#!" class="waves-effect grey-text text-darken-4">
                     <i class="material-icons large">add</i>
                   </a>
-                    <br/>
+                  <br/>
                 </div>
               </div>
             </div>
@@ -464,7 +480,6 @@ and open the template in the editor.
         </div>
         <div class="col s9">
           <div class="row z-depth-5">
-
 
             <div id="A" class="letter col s6">
               <div class="card">
@@ -596,6 +611,7 @@ and open the template in the editor.
               <a class="modal-close btn waves-effect waves-light" onclick="validateShopForm()">Concluído
                 <i class="material-icons right">send</i>
               </a>
+
             </form>
           </div>
         </div>
@@ -650,19 +666,19 @@ and open the template in the editor.
     <script type="text/javascript" src="js/calendar.js"></script>
     <script type="text/javascript" src="js/rest.js"></script>
     <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                  renderDate();
+              document.addEventListener('DOMContentLoaded', function () {
+                renderDate();
+              });
+              $(document).ready(function () {
+                $('.tabs').tabs();
+                $('.dropdown-trigger').dropdown({
+                  alignment: 'right',
+                  constrainWidth: false,
+                  coverTrigger: false
                 });
-                $(document).ready(function () {
-                  $('.tabs').tabs();
-                  $('.dropdown-trigger').dropdown({
-                    alignment: 'right',
-                    constrainWidth: false,
-                    coverTrigger: false
-                  });
-                  $('.modal').modal();
-                  $('select').formSelect();
-                });
+                $('.modal').modal();
+                $('select').formSelect();
+              });
     </script>
     <script>
       function validateForm() {
