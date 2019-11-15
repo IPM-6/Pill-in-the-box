@@ -27,21 +27,6 @@
   padding: 4px 0;
   text-align: center;
 }
-
-.todos a{
-  display: block;
-  width: 40px;
-  padding: 4px 0;
-  text-align: center;
-}
-
-.list_search ul li a {
-  display: block;
-  width: 25px;
-  padding: 4px 0;
-  text-align: center;
-}
-
 .myvalign {
     display: -webkit-box; 
     -webkit-box-align: center;
