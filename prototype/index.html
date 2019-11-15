@@ -5,643 +5,660 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-  <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
-    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
-    <title>Index</title>
-  </head>
-  <body>
-    <header>
-      <div class="navbar-fixed">
-        <nav class="white">
-          <div class="nav-wrapper">
-            <div class="row">
-              <div class="col s1">
-                <a href="#!" class="brand-logo grey-text text-darken-4">
-                  <img class="responsive-img" src="./images/logo.png" alt="Logo" style="max-height: 56px"/>
-                </a>
-              </div>
-              <div class="col s3">
-                <ul class="left">
-                  <li>
-                    <a id="login" class="btn-flat waves-effect grey-text text-darken-4 waves-light modal-trigger" href="#modal1" >Entrar</a>
-                  </li>
-                  <li>
-                    <a id="signin" class="btn-flat waves-effect grey-text text-darken-4 waves-light modal-trigger" href="#modal2" >Registrar</a>
-                  </li>
-                </ul>
-                <a id="name" class="grey-text text-darken-4 right-align hide">João Silva</a>
-              </div>
-              <div class="col s2">
-                <a id="date" class="grey-text text-darken-4 right-align"></a>
-              </div>
-              <div class="col s4">
-                <ul class="tabs">
-                  <li class="tab col s3">
-                    <a href="#caixa"><i class="material-icons">home</i></a>
-                  </li>
-                  <li class="tab col s3">
-                    <a href="#stock"><i class="material-icons">pie_chart_outlined</i></a>
-                  </li>
-                  <li class="tab col s3">
-                    <a href="#compras"><i class="material-icons">shopping_cart</i></a>
-                  </li>
-                  <li class="tab col s3">
-                    <a href="#calendario"><i class="material-icons">insert_invitation</i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col s2">
-                <ul class="right">
-                  <li>
-                    <a href="#!" data-target="notifications" class="dropdown-trigger btn-floating waves-effect grey darken-4 pulse">
-                      <i class="material-icons">notifications</i>
-                    </a>
+        <link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
+        <title>Index</title>
+    </head>
+    <body>
+        <header>
+            <div class="navbar-fixed">
+                <nav class="white">
+                    <div class="nav-wrapper">
+                        <div class="row">
+                            <div class="col s1">
+                                <a href="#!" class="brand-logo grey-text text-darken-4">
+                                    <img class="responsive-img" src="./images/logo.png" alt="Logo" style="max-height: 56px"/>
+                                </a>
+                            </div>
+                            <div class="col s3">
+                                <ul class="left">
+                                    <li>
+                                        <a id="login" class="btn-flat waves-effect grey-text text-darken-4 waves-light modal-trigger" href="#modal1" >Entrar</a>
+                                    </li>
+                                    <li>
+                                        <a id="signin" class="btn-flat waves-effect grey-text text-darken-4 waves-light modal-trigger" href="#modal2" >Registrar</a>
+                                    </li>
+                                </ul>
+                                <a id="name" class="grey-text text-darken-4 right-align hide">João Silva</a>
+                            </div>
+                            <div class="col s2">
+                                <a id="date" class="grey-text text-darken-4 right-align"></a>
+                            </div>
+                            <div class="col s4">
+                                <ul class="tabs">
+                                    <li class="tab col s3">
+                                        <a href="#caixa"><i class="material-icons">home</i></a>
+                                    </li>
+                                    <li class="tab col s3">
+                                        <a href="#stock"><i class="material-icons">pie_chart_outlined</i></a>
+                                    </li>
+                                    <li class="tab col s3">
+                                        <a href="#compras"><i class="material-icons">shopping_cart</i></a>
+                                    </li>
+                                    <li class="tab col s3">
+                                        <a href="#calendario"><i class="material-icons">insert_invitation</i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col s2">
+                                <ul class="right">
+                                    <li>
+                                        <a href="#!" data-target="notifications" class="dropdown-trigger btn-floating waves-effect grey darken-4 pulse">
+                                            <i class="material-icons">notifications</i>
+                                        </a>
 
-                    <ul id="notifications" class="dropdown-content" style="width: 600px">
-                      <li class="white">
-                        <span class="flow-text grey-text text-darken-4">Notificações</span>
-                      </li>
-                      <li>
-                        <div class="card">
-                          <div class="card-content">
-                            <span class="card-title">Notification Title</span>
-                            <p>Something about the notification</p>
-                          </div>
+                                        <ul id="notifications" class="dropdown-content" style="width: 600px">
+                                            <li class="white">
+                                                <span class="flow-text grey-text text-darken-4">Notificações</span>
+                                            </li>
+                                            <li>
+                                                <div class="card">
+                                                    <div class="card-content">
+                                                        <span class="card-title">Notification Title</span>
+                                                        <p>Something about the notification</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="card">
+                                                    <div class="card-content">
+                                                        <span class="card-title">Notification Title</span>
+                                                        <p>Something about the notification</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#!" data-target="settings" class="dropdown-trigger btn-floating waves-effect grey darken-4">
+                                            <i class="material-icons">settings</i>
+                                        </a>
+                                        <ul id="settings" class="dropdown-content">
+                                            <li class="white">
+                                                <span class="flow-text grey-text text-darken-4">Definições</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                      </li>
-                      <li>
-                        <div class="card">
-                          <div class="card-content">
-                            <span class="card-title">Notification Title</span>
-                            <p>Something about the notification</p>
-                          </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
+                            </div>
                         </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#!" data-target="settings" class="dropdown-trigger btn-floating waves-effect grey darken-4">
-                      <i class="material-icons">settings</i>
-                    </a>
-                    <ul id="settings" class="dropdown-content">
-                      <li class="white">
-                        <span class="flow-text grey-text text-darken-4">Definições</span>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
-                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
-              </div>
-            </div>
-            <!--<button class="waves-effect grey-text text-darken-4" type="button" onclick="validateForm()">Entrar</button>-->
-            <a class="modal-close waves-effect waves-green btn-flat" onclick="validateForm()">Entrar</a>
-          </form>
-        </div>
-      </div>
-      <div id="modal2" class="modal">
-        <div class="modal-content">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate">
-                <label for="first_name">Primeiro Nome</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Último Nome</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="emailR" type="email" class="validate">
-                <label for="email">Email</label>
-                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="passwordR" type="password" class="validate">
-                <label for="password">Password</label>
-                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
-              </div>
-            </div>
-            <a class="modal-close waves-effect waves-green btn-flat" onclick="">Registrar</a>
-          </form>
-        </div>
-      </div>
-    </header>
-    <main class="container">
-
-      <div id="caixa" class="row">
-          
-          <div class="row valign-wrapper">
-              <div class="input-field col s3">
-                  <select>
-                      <option value="hour" selected>Hora</option>
-                      <option value="person">Pessoa</option>
-                  </select>
-                  <label class="flow-text">Organizar por:</label>
-              </div>
-              <div class="col s6" style="height:110px; overflow:auto;">
-                  <table class="striped" >
-                      <tr>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                          <td>
-                              <label>
-                                  <input type="checkbox"/>
-                                  <span>Person</span>
-                              </label>
-                          </td>
-                      </tr>
-                  </table>
-              </div>
-              <div class="col s3">
-                  <a class="btn-medium waves-effect grey-text text-darken-4 waves-light">Entrar</a>
-              </div>
-          </div>
-
-        <div class="row valign-wrapper">
-          <div class="col s5 left-align">
-            <h4>Nome da Caixa</h4>
-          </div>
-          <div class="col s5 right-align">
-            <span>Dono</span>
-          </div>
-          <div class="col s2">
-          </div>
-        </div>
-        <div class="row valign-wrapper">
-          <div class="col s10">
-            <div class="row z-depth-5 center-align">
-              <div class="col s3">
-                <div class="card">
-                  <span class="card-title">Nome do Comprimido</span>
-                  <div class="card-action">
-                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
-                  </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
+                            </div>
+                        </div>
+                        <!--<button class="waves-effect grey-text text-darken-4" type="button" onclick="validateForm()">Entrar</button>-->
+                        <a class="modal-close waves-effect waves-green btn-flat" onclick="validateForm()">Entrar</a>
+                    </form>
                 </div>
-              </div>
-              <div class="col s3">
-                <div class="card">
-                  <span class="card-title">Nome do Comprimido</span>
-                  <div class="card-action">
-                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
-                  </div>
+            </div>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name" type="text" class="validate">
+                                <label for="first_name">Primeiro Nome</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Último Nome</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="emailR" type="email" class="validate">
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="passwordR" type="password" class="validate">
+                                <label for="password">Password</label>
+                                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
+                            </div>
+                        </div>
+                        <a class="modal-close waves-effect waves-green btn-flat" onclick="">Registrar</a>
+                    </form>
                 </div>
-              </div>
-              <div class="col s3">
-                <div class="card">
-                  <span class="card-title">Nome do Comprimido</span>
-                  <div class="card-action">
-                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col s3">
-                <div class="card">
-                  <span class="card-title">Nome do Comprimido</span>
-                  <div class="card-action">
-                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col s3">
-                <a href="#!" class="waves-effect grey-text text-darken-4">
-                  <i class="material-icons large">add</i>
-                </a>
-              </div>
             </div>
-          </div>
-          <div class="col s2 center">
-            <div class="row">
-              <a class="grey-text text-darken-4">
-                <i class="material-icons medium">edit</i>
-              </a>
-            </div>
-            <div class="row">
-              <button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>
-            </div>
-            <div class="row">
-              <div class="col s6">
-                <span>Hora</span>
-              </div>
-              <div class="col s6">
-                <span>Data</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="divider"> </div>
-        <div class="row">
-          <div class="row valign-wrapper">
-            <div class="col s5 left-align">
-              <h4>Nome da Caixa</h4>
-            </div>
-            <div class="col s5 right-align">
-              <span>Dono</span>
-            </div>
-            <div class="col s2">
-            </div>
-          </div>
-          <div class="row valign-wrapper">
-            <div class="col s10">
-                <div class="row z-depth-5 center-align">
+        </header>
+        <main class="container">
 
-                <div class="col s3">
-                  <div class="card">
-                    <span class="card-title">Nome do Comprimido</span>
-                    <div class="card-action">
-                      <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+            <div id="caixa" class="row">
+
+                <div class="row center-align valign-wrapper">
+                    <div class="input-field col s2">
+                        <select>
+                            <option value="hour" selected>Hora</option>
+                            <option value="person">Pessoa</option>
+                        </select>
+                        <label class="flow-text">Organizar por:</label>
                     </div>
-                  </div>
-                </div>
-                <div class="col s3">
-                  <div class="card">
-                    <span class="card-title">Nome do Comprimido</span>
-                    <div class="card-action">
-                      <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                    <div class="col s6">
+                        <div class="row valign-wrapper">
+                            <div class="col s10" style="height:110px; overflow:auto;">
+                                <table class="striped">
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox"/>
+                                                <span>Person</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox"/>
+                                                <span>Person</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox"/>
+                                                <span>Person</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox"/>
+                                                <span>Person</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox"/>
+                                                <span>Person</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox"/>
+                                                <span>Person</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox"/>
+                                                <span>Person</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox"/>
+                                                <span>Person</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input type="checkbox"/>
+                                                <span>Person</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col s2">
+                                <a class="btn-floating">
+                            <i class="material-icons">add</i>
+                        </a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col s3">
-                    <br/>
-                  <a href="#!" class="waves-effect grey-text text-darken-4">
-                    <i class="material-icons large">add</i>
-                  </a>
+                    <div class="col s3">
+                        <br/>
+                        <div class="row">
+                            <a class="btn waves-effect grey-text text-darken-4 waves-light">Desselecionar Todos</a>
+                        </div>
+                        <div class="row">
+                            <a class="btn waves-effect grey-text text-darken-4 waves-light">Selecionar Todos</a>
+                        </div>
+                    </div>
                     <br/>
                 </div>
-              </div>
             </div>
-            <div class="col s2 center">
-              <div class="row">
-                <a class="grey-text text-darken-4">
-                  <i class="material-icons medium">edit</i>
-                </a>
-              </div>
-              <div class="row">
-                <button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>
-              </div>
-              <div class="row">
-                <div class="col s6">
-                  <span>Hora</span>
+
+            <div class="row valign-wrapper">
+                <div class="col s5 left-align">
+                    <h4>Nome da Caixa</h4>
                 </div>
-                <div class="col s6">
-                  <span>Data</span>
+                <div class="col s5 right-align">
+                    <span>Dono</span>
                 </div>
-              </div>
+                <div class="col s2">
+                </div>
             </div>
-          </div>
+            <div class="row valign-wrapper">
+                <div class="col s10">
+                    <div class="row z-depth-5 center-align">
+                        <div class="col s3">
+                            <div class="card">
+                                <span class="card-title">Nome do Comprimido</span>
+                                <div class="card-action">
+                                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s3">
+                            <div class="card">
+                                <span class="card-title">Nome do Comprimido</span>
+                                <div class="card-action">
+                                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s3">
+                            <div class="card">
+                                <span class="card-title">Nome do Comprimido</span>
+                                <div class="card-action">
+                                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s3">
+                            <div class="card">
+                                <span class="card-title">Nome do Comprimido</span>
+                                <div class="card-action">
+                                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s3">
+                            <a href="#!" class="waves-effect grey-text text-darken-4">
+                                <i class="material-icons large">add</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2 center">
+                    <div class="row">
+                        <a class="grey-text text-darken-4">
+                            <i class="material-icons medium">edit</i>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>
+                    </div>
+                    <div class="row">
+                        <div class="col s6">
+                            <span>Hora</span>
+                        </div>
+                        <div class="col s6">
+                            <span>Data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"> </div>
+            <div class="row">
+                <div class="row valign-wrapper">
+                    <div class="col s5 left-align">
+                        <h4>Nome da Caixa</h4>
+                    </div>
+                    <div class="col s5 right-align">
+                        <span>Dono</span>
+                    </div>
+                    <div class="col s2">
+                    </div>
+                </div>
+                <div class="row valign-wrapper">
+                    <div class="col s10">
+                        <div class="row z-depth-5 center-align">
+
+                            <div class="col s3">
+                                <div class="card">
+                                    <span class="card-title">Nome do Comprimido</span>
+                                    <div class="card-action">
+                                        <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s3">
+                                <div class="card">
+                                    <span class="card-title">Nome do Comprimido</span>
+                                    <div class="card-action">
+                                        <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s3">
+                                <br/>
+                                <a href="#!" class="waves-effect grey-text text-darken-4">
+                                    <i class="material-icons large">add</i>
+                                </a>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s2 center">
+                        <div class="row">
+                            <a class="grey-text text-darken-4">
+                                <i class="material-icons medium">edit</i>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>
+                        </div>
+                        <div class="row">
+                            <div class="col s6">
+                                <span>Hora</span>
+                            </div>
+                            <div class="col s6">
+                                <span>Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div id="stock" class="row grey-text text-darken-4">
-        <div class="list_search">
-          <ul>
-            <li class="first-char">
-              <a class="todos" style="width: 40px" href="/#">Todos</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">A</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">B</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">C</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">D</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">E</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">F</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">G</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">H</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">I</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">J</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">K</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">L</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">M</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">N</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">O</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">P</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">Q</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">R</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">S</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">T</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">U</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">V</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">W</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">X</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">Y</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">Z</a>
-            </li>
-            <li class="first-char">
-              <a href="/#">Outros</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col s9">
-          <div class="row z-depth-5">
+        <div id="stock" class="row grey-text text-darken-4">
+            <div class="list_search">
+                <ul>
+                    <li class="first-char">
+                        <a class="todos" style="width: 40px" href="/#">Todos</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">A</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">B</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">C</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">D</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">E</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">F</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">G</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">H</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">I</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">J</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">K</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">L</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">M</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">N</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">O</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">P</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">Q</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">R</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">S</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">T</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">U</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">V</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">W</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">X</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">Y</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">Z</a>
+                    </li>
+                    <li class="first-char">
+                        <a href="/#">Outros</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col s9">
+                <div class="row z-depth-5">
 
 
-            <div class="col s6">
-              <div class="card">
-                <h4>A</h4>
-                <div class="card-action">
-                  <a class="waves-effect grey-text text-darken-4">Atarax:</a>
-                  <a id="ataraxCount" class="grey-text text-darken-4">10</a>
+                    <div class="col s6">
+                        <div class="card">
+                            <h4>A</h4>
+                            <div class="card-action">
+                                <a class="waves-effect grey-text text-darken-4">Atarax:</a>
+                                <a id="ataraxCount" class="grey-text text-darken-4">10</a>
+                            </div>
+                            <div class="card-action">
+                                <a class="waves-effect grey-text text-darken-4">Adderall:</a>
+                                <a id="adderallCount" class="grey-text text-darken-4">2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card">
+                            <h4>N</h4>
+                            <div class="card-action">
+                                <a class="waves-effect grey-text text-darken-4">Nasomete:</a>
+                                <a id="nasometeCount" class="grey-text text-darken-4">40</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="card">
+                            <h4>Z</h4>
+                            <div class="card-action">
+                                <a class="waves-effect grey-text text-darken-4">Zyretec:</a>
+                                <a id="zyretecCount" class="grey-text text-darken-4">20</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-action">
-                  <a class="waves-effect grey-text text-darken-4">Adderall:</a>
-                  <a id="adderallCount" class="grey-text text-darken-4">2</a>
-                </div>
-              </div>
             </div>
-            <div class="col s6">
-              <div class="card">
-                <h4>N</h4>
-                <div class="card-action">
-                  <a class="waves-effect grey-text text-darken-4">Nasomete:</a>
-                  <a id="nasometeCount" class="grey-text text-darken-4">40</a>
-                </div>
-              </div>
-            </div>
-            <div class="col s6">
-              <div class="card">
-                <h4>Z</h4>
-                <div class="card-action">
-                  <a class="waves-effect grey-text text-darken-4">Zyretec:</a>
-                  <a id="zyretecCount" class="grey-text text-darken-4">20</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s3">
-          <label>
-            <input type="checkbox" class="filled-in" checked="checked" />
-            <span>Analgesico</span>
-          </label>
-          <br/>
-          <label>
-            <input type="checkbox" class="filled-in" checked="checked" />
-            <span>Febre</span>
-          </label>
-          <br/>
-          <label>
-            <input type="checkbox" class="filled-in" checked="checked" />
-            <span>Dores de costas</span>
-          </label>
-        </div>
-      </div>
-      <div id="compras" class="row">
-        <div id="shoppingList1" class="card-panel large">
-          <table id="shoppingTable1" class="centered">
-            <thead>
-              <tr>
-                <th>Em falta:</th>
-                <th>Receita médica:</th>
-                <th>Preço:</th>
-                <th>Detalhes:</th>
-              </tr>
-            <tbody id="pillsToShop">
-              <tr>
-                <td>
-                  <a class="btn-floating btn-medium waves-effect waves-light red modal-trigger" href="#shopForm1">
-                    <i class="material-icons">add</i>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-            </thead>
-          </table>
-        </div>
-        <div id="shoppingList2" class="card-panel large">
-          <table id="shoppingTable2" class="centered">
-            <thead>
-              <tr>
-                <th>Quase a acabar:</th>
-                <th>Receita médica:</th>
-                <th>Preço:</th>
-                <th>Detalhes:</th>
-              </tr>
-            </thead>
-            <tbody id="pillsRunningOut">
-
-            </tbody>
-          </table>	
-        </div>
-        <div id="shopForm1" class="modal">
-          <div class="modal-content">
-            <form class="col s12">
-              <div class="row">
-                <b size=12>Preencha as informações necessárias(
-                  <span class="red-text text-darken-2">*</span>
-                  ) relativas ao comprimido a comprar:</b>
-              </div>			
-              <div class="row">
-                <div class="input-field col s3">
-                  <input placeholder="Nome" id="pillName" type="text">
-                  <label for="pillName">Nome do comprimido:
-                    <span class="red-text text-darken-2">*</span>
-                  </label>
-                </div>
-                <div class="input-field col s3">
-                  <input placeholder="Quantidade" id="pillAmount" type="text">
-                  <label for="pillAmount">Quantidade:
-                    <span class="red-text text-darken-2">*</span>
-                  </label>
-                </div>
-                <div class="input-field col s3">
-                  <input placeholder="Preço" id="pillPrice" type="text">
-                  <label for="pillPrice">Preço:</label>
-                </div>
-              </div>
-              <div class="row">Sujeito a receita médica?<span class="red-text text-darken-2">*</span>
-                <form action="#">
-                  <p>
-                    <label>
-                      <input id="receipt" type="checkbox" class="filled-in" checked="unchecked"/>
-                      <span>Sim</span>
-                    </label>
-                  </p>
-                </form>
-                <!--<button class="btn waves-effect waves-light" type="submit" name="action">Concluído
-                    <i class="material-icons right">send</i>
-                </button>-->
-              </div>
-              <!--<button class="waves-effect grey-text text-darken-4" type="button" onclick="validateForm()">Entrar</button>-->
-              <a class="modal-close btn waves-effect waves-light" onclick="validateShopForm()">Concluído
-                <i class="material-icons right">send</i>
-              </a>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div id="calendario" class="row">
-        <div id="calendar" class="card-panel large">
-          <div id="month" class="row valign-wrapper">
             <div class="col s3">
-              <a  href="#!" class="btn-floating btn waves-effect grey right prev" onclick="prevMonth()">
-                <i class="material-icons">chevron_left</i>
-              </a>
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked" />
+                    <span>Analgesico</span>
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked" />
+                    <span>Febre</span>
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked" />
+                    <span>Dores de costas</span>
+                </label>
             </div>
-            <div class="col s6 center-align">
-              <span id="month_str" class="flow-text"></span>
-
-            </div>
-            <div class="col s3">
-              <a href="#!" class="btn-floating btn waves-effect grey left next" onclick="nextMonth()">
-                <i class="material-icons">chevron_right</i>
-              </a>
-            </div>
-          </div>
-          <div id="weekdays" class="row center-align">
-            <table class="centered">
-              <thead>
-                <tr>
-                  <th>Domingo</th>
-                  <th>Segunda</th>
-                  <th>Terça</th>
-                  <th>Quarta</th>
-                  <th>Quinta</th>
-                  <th>Sexta</th>
-                  <th>Sábado</th> 
-                </tr>
-              </thead>
-              <tbody id="days">
-
-              </tbody>
-            </table>
-          </div>
         </div>
-      </div>
+        <div id="compras" class="row">
+            <div id="shoppingList1" class="card-panel large">
+                <table id="shoppingTable1" class="centered">
+                    <thead>
+                        <tr>
+                            <th>Em falta:</th>
+                            <th>Receita médica:</th>
+                            <th>Preço:</th>
+                            <th>Detalhes:</th>
+                        </tr>
+                    <tbody id="pillsToShop">
+                        <tr>
+                            <td>
+                                <a class="btn-floating btn-medium waves-effect waves-light red modal-trigger" href="#shopForm1">
+                                    <i class="material-icons">add</i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </thead>
+                </table>
+            </div>
+            <div id="shoppingList2" class="card-panel large">
+                <table id="shoppingTable2" class="centered">
+                    <thead>
+                        <tr>
+                            <th>Quase a acabar:</th>
+                            <th>Receita médica:</th>
+                            <th>Preço:</th>
+                            <th>Detalhes:</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pillsRunningOut">
+
+                    </tbody>
+                </table>	
+            </div>
+            <div id="shopForm1" class="modal">
+                <div class="modal-content">
+                    <form class="col s12">
+                        <div class="row">
+                            <b size=12>Preencha as informações necessárias(
+                                <span class="red-text text-darken-2">*</span>
+                                ) relativas ao comprimido a comprar:</b>
+                        </div>			
+                        <div class="row">
+                            <div class="input-field col s3">
+                                <input placeholder="Nome" id="pillName" type="text">
+                                <label for="pillName">Nome do comprimido:
+                                    <span class="red-text text-darken-2">*</span>
+                                </label>
+                            </div>
+                            <div class="input-field col s3">
+                                <input placeholder="Quantidade" id="pillAmount" type="text">
+                                <label for="pillAmount">Quantidade:
+                                    <span class="red-text text-darken-2">*</span>
+                                </label>
+                            </div>
+                            <div class="input-field col s3">
+                                <input placeholder="Preço" id="pillPrice" type="text">
+                                <label for="pillPrice">Preço:</label>
+                            </div>
+                        </div>
+                        <div class="row">Sujeito a receita médica?<span class="red-text text-darken-2">*</span>
+                            <form action="#">
+                                <p>
+                                    <label>
+                                        <input id="receipt" type="checkbox" class="filled-in" checked="unchecked"/>
+                                        <span>Sim</span>
+                                    </label>
+                                </p>
+                            </form>
+                            <!--<button class="btn waves-effect waves-light" type="submit" name="action">Concluído
+                                <i class="material-icons right">send</i>
+                            </button>-->
+                        </div>
+                        <!--<button class="waves-effect grey-text text-darken-4" type="button" onclick="validateForm()">Entrar</button>-->
+                        <a class="modal-close btn waves-effect waves-light" onclick="validateShopForm()">Concluído
+                            <i class="material-icons right">send</i>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="calendario" class="row">
+            <div id="calendar" class="card-panel large">
+                <div id="month" class="row valign-wrapper">
+                    <div class="col s3">
+                        <a  href="#!" class="btn-floating btn waves-effect grey right prev" onclick="prevMonth()">
+                            <i class="material-icons">chevron_left</i>
+                        </a>
+                    </div>
+                    <div class="col s6 center-align">
+                        <span id="month_str" class="flow-text"></span>
+
+                    </div>
+                    <div class="col s3">
+                        <a href="#!" class="btn-floating btn waves-effect grey left next" onclick="nextMonth()">
+                            <i class="material-icons">chevron_right</i>
+                        </a>
+                    </div>
+                </div>
+                <div id="weekdays" class="row center-align">
+                    <table class="centered">
+                        <thead>
+                            <tr>
+                                <th>Domingo</th>
+                                <th>Segunda</th>
+                                <th>Terça</th>
+                                <th>Quarta</th>
+                                <th>Quinta</th>
+                                <th>Sexta</th>
+                                <th>Sábado</th> 
+                            </tr>
+                        </thead>
+                        <tbody id="days">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
 
 
-      <div>TODO write content</div>
+        <div>TODO write content</div>
     </main>
 
     <!--JavaScript at end of body for optimized loading-->
@@ -649,53 +666,53 @@ and open the template in the editor.
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/calendar.js"></script>
     <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                  renderDate();
-                });
-                $(document).ready(function () {
-                  $('.tabs').tabs();
-                  $('.dropdown-trigger').dropdown({
-                    alignment: 'right',
-                    constrainWidth: false,
-                    coverTrigger: false
-                  });
-                  $('.modal').modal();
-                  $('select').formSelect();
-                });
+                            document.addEventListener('DOMContentLoaded', function () {
+                                renderDate();
+                            });
+                            $(document).ready(function () {
+                                $('.tabs').tabs();
+                                $('.dropdown-trigger').dropdown({
+                                    alignment: 'right',
+                                    constrainWidth: false,
+                                    coverTrigger: false
+                                });
+                                $('.modal').modal();
+                                $('select').formSelect();
+                            });
     </script>
     <script>
-      function validateForm() {
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password").value;
-        if (email == "joao@gmail.com" && password == "1234") {
-          document.getElementById("login").classList.add("hide");
-          document.getElementById("signin").classList.add("hide");
-          document.getElementById("name").classList.remove("hide");
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if (email == "joao@gmail.com" && password == "1234") {
+                document.getElementById("login").classList.add("hide");
+                document.getElementById("signin").classList.add("hide");
+                document.getElementById("name").classList.remove("hide");
+            }
         }
-      }
     </script>
     <script>
-      n = new Date();
-      y = n.getFullYear();
-      m = n.getMonth();
-      d = n.getDate();
-      month = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto",
-        "Setembro", "Outubro", "Novembro", "Dezembro"];
-      document.getElementById("date").innerHTML = d + " de " + month[m] + " de " + y;
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth();
+        d = n.getDate();
+        month = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto",
+            "Setembro", "Outubro", "Novembro", "Dezembro"];
+        document.getElementById("date").innerHTML = d + " de " + month[m] + " de " + y;
     </script>
     <script>
-      function validateShopForm() {
-        var pillName = document.getElementById("pillName").value;
-        var pillAmount = document.getElementById("pillAmount").value;
-        var medicReceipt = document.getElementById("receipt").checked;
-        if (pillName == null || pillAmount == null || medicReceipt == null) {
-          alert("Erro: informação necessária não preenchida.");
-        } else {
-          var pillPrice = document.getElementById("pillPrice").value;
-          this.addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt);
+        function validateShopForm() {
+            var pillName = document.getElementById("pillName").value;
+            var pillAmount = document.getElementById("pillAmount").value;
+            var medicReceipt = document.getElementById("receipt").checked;
+            if (pillName == null || pillAmount == null || medicReceipt == null) {
+                alert("Erro: informação necessária não preenchida.");
+            } else {
+                var pillPrice = document.getElementById("pillPrice").value;
+                this.addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt);
+            }
         }
-      }
     </script>
 
-  </body>
+</body>
 </html>
