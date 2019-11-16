@@ -238,7 +238,7 @@ and open the template in the editor.
                 </table>
               </div>
               <div class="col s2">
-                <a class="btn-floating">
+                <a class="btn-floating" href="modal3">
                   <i class="material-icons">add</i>
                 </a>
               </div>
@@ -386,6 +386,48 @@ and open the template in the editor.
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="boxname" type="text" class="validate">
+                  <label for="boxname">Nome da caixa</label>
+                  <span class="helper-text" data-error="Errado" data-success="Certo"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="pillname1" type="text" class="validate">
+                  <label for="pillname1">Nome do comprimido</label>
+                  <span class="helper-text" data-error="Errado" data-success="Certo"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>
+                  <input type="number" name="quantity" min="1">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <a href="#!" class="waves-effect grey-text text-darken-4">
+                    <i class="material-icons large">add</i>
+                  </a>
+                  <a class="grey-text text-darken-4 center-align">Adicionar comprimido</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <a class="grey-text text-darken-4 right-align">Periodicidade: </a>
+                  <a class="grey-text text-darken-4 center-align">Adicionar comprimido</a>
+                </div>
+              </div>
+              <!--<button class="waves-effect grey-text text-darken-4" type="button" onclick="validateForm()">Entrar</button>-->
+              <a class="modal-close waves-effect waves-green btn-flat" onclick="finishBox()">Concluido</a>
+            </form>
           </div>
         </div>
       </div>
@@ -666,19 +708,19 @@ and open the template in the editor.
     <script type="text/javascript" src="js/calendar.js"></script>
     <script type="text/javascript" src="js/rest.js"></script>
     <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                renderDate();
-              });
-              $(document).ready(function () {
-                $('.tabs').tabs();
-                $('.dropdown-trigger').dropdown({
-                  alignment: 'right',
-                  constrainWidth: false,
-                  coverTrigger: false
+                document.addEventListener('DOMContentLoaded', function () {
+                  renderDate();
                 });
-                $('.modal').modal();
-                $('select').formSelect();
-              });
+                $(document).ready(function () {
+                  $('.tabs').tabs();
+                  $('.dropdown-trigger').dropdown({
+                    alignment: 'right',
+                    constrainWidth: false,
+                    coverTrigger: false
+                  });
+                  $('.modal').modal();
+                  $('select').formSelect();
+                });
     </script>
     <script>
       function validateForm() {
