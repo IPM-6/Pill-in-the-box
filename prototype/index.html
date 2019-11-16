@@ -238,7 +238,7 @@ and open the template in the editor.
                 </table>
               </div>
               <div class="col s2">
-                <a class="btn-floating" href="modal3">
+                <a class="btn-floating" href="#modal3">
                   <i class="material-icons">add</i>
                 </a>
               </div>
@@ -456,7 +456,52 @@ and open the template in the editor.
                   </label>
                 </div>
               </div>
-              <!--<button class="waves-effect grey-text text-darken-4" type="button" onclick="validateForm()">Entrar</button>-->
+              <div class="row">
+                <div class="input-field col s12">
+                  <a class="grey-text text-darken-4 center-align">Durante: </a>
+                  <select>
+                    <option value="indefinidamente" selected="">Indefinidamente</option>
+                    <option value="dias">Dias</option>
+                    <option value="meses">Meses</option>
+                  </select>
+                  <input type="number" name="timeDayMonth" min="1">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <a class="grey-text text-darken-4 center-align">Hora: </a>
+                  <input type="number" name="timeHour" min="0" max="23">
+                  <a class="grey-text text-darken-4 center-align">:</a>
+                  <input type="number" name="timeMinute" min="0" max="59">
+                  <a class="grey-text text-darken-4 center-align">h</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <a class="grey-text text-darken-4 center-align">Quem vai usar a caixa: </a>
+                  <label>
+                    <input name="group1" type="radio" checked />
+                    <span>João</span>
+                  </label>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Outro</span>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <a class="grey-text text-darken-4 center-align">Adicionar notificação?: </a>
+                  <label>
+                    <input name="group2" type="radio" checked />
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input name="group2" type="radio" />
+                    <span>Não</span>
+                  </label>
+                </div>
+              </div>
               <a class="modal-close waves-effect waves-green btn-flat" onclick="finishBox()">Concluido</a>
             </form>
           </div>
