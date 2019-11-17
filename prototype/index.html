@@ -238,7 +238,7 @@ and open the template in the editor.
                 </table>
               </div>
               <div class="col s2">
-                <a class="btn-floating" href="#modal3">
+                <a class="btn-floating modal-trigger" href="#modal3">
                   <i class="material-icons">add</i>
                 </a>
               </div>
@@ -407,8 +407,12 @@ and open the template in the editor.
               </div>
               <div class="row">
                 <div class="col s12">
-                  <a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>
-                  <input type="number" name="quantity" min="1">
+                  <div class="col s5">
+                    <a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>
+                  </div>
+                  <div class="col s2">
+                    <input type="number" name="quantity" min="1">
+                  </div>
                 </div>
               </div>
               <div class="row">
@@ -622,21 +626,21 @@ and open the template in the editor.
               </div>
             </div>
             <div id="Z" class="letter col s6">
-            <div class="card">
-              <h4>Z</h4>
-              <div class="card-action">
-                <a class="waves-effect grey-text text-darken-4">Zyretec:</a>
-                <a id="zyretecCount" class="grey-text text-darken-4">20</a>
+              <div class="card">
+                <h4>Z</h4>
+                <div class="card-action">
+                  <a class="waves-effect grey-text text-darken-4">Zyretec:</a>
+                  <a id="zyretecCount" class="grey-text text-darken-4">20</a>
+                </div>
               </div>
             </div>
-          </div>
 
             <!-- AQUI -->
-              <div id="addToStockButton" class="letter col s6 ">
-                  <a class="btn-floating btn-medium  waves-effect waves-light red modal-trigger" href="#stockForm1">
-                    <i class="material-icons">add</i>
-                  </a>
-              </div>
+            <div id="addToStockButton" class="letter col s6 ">
+              <a class="btn-floating btn-medium  waves-effect waves-light red modal-trigger" href="#stockForm1">
+                <i class="material-icons">add</i>
+              </a>
+            </div>
 
           </div>
         </div>
