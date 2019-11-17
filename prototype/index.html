@@ -647,17 +647,21 @@ and open the template in the editor.
         <div class="col s3">
           <label>
             <input type="checkbox" class="filled-in" checked="checked" />
-            <span>Analgesico</span>
+            <span > Dores de Cabeça</span>
           </label>
           <br/>
           <label>
             <input type="checkbox" class="filled-in" checked="checked" />
-            <span>Febre</span>
+            <span >Febre</span>
           </label>
           <br/>
           <label>
             <input type="checkbox" class="filled-in" checked="checked" />
-            <span>Dores de costas</span>
+            <span >Dores de Costas</span>
+          </label>
+          <label>
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span >Alergias</span>
           </label>
         </div>
         <!-- AQUI -->
@@ -688,7 +692,7 @@ and open the template in the editor.
                       <div class="row">
                         <div class="input-field col s12">
                           <input type="text" id="autocomplete-input" class="autocomplete">
-                          <label for="autocomplete-input">Efeito</label>
+                          <label for="autocomplete-input">Sintoma Que Trata</label>
                         </div>
                       </div>
                     </div>
@@ -896,9 +900,10 @@ and open the template in the editor.
       $(document).ready(function(){
         $('input.autocomplete').autocomplete({
           data: {
-            "Analgesico": null,
-            "Microsoft": null,
-            "Google": null
+            "Dores de Cabeça": null,
+            "Febre": null,
+            "Google": null,
+
           },
         });
       });
