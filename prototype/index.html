@@ -408,7 +408,7 @@ and open the template in the editor.
                   <div class="col s5">
                     <a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>
                   </div>
-                  <div class="col s2">
+                  <div class="col s2 card">
                     <input class="" type="number" name="quantity" min="1">
                   </div>
                 </div>
@@ -423,39 +423,60 @@ and open the template in the editor.
               </div>
               <div class="row card">
                 <div class="col s12">
-                  <a class="grey-text text-darken-4 right-align">Periodicidade: </a>
-                  <label>
-                    <input type="checkbox" name="segunda" class="filled-in" checked="checked" />
-                    <span>2ª  </span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="terca" class="filled-in" checked="checked" />
-                    <span>3ª  </span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="quarta" class="filled-in" checked="checked" />
-                    <span>4ª  </span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="quinta" class="filled-in" checked="checked" />
-                    <span>5ª  </span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="sexta" class="filled-in" checked="checked" />
-                    <span>6ª  </span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="sabado" class="filled-in" checked="checked" />
-                    <span>Sab.  </span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="domingo" class="filled-in" checked="checked" />
-                    <span>Dom.  </span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="todosDias" class="filled-in" checked="checked" />
-                    <span>Todos os dias</span>
-                  </label>
+                  <div class="col s2">
+                    <a class="grey-text text-darken-4 right-align">Periodicidade: </a>
+                  </div>
+                  <div class="col s10 left-align">
+                    <label>
+                      <input type="checkbox" name="todosDias" class="filled-in" checked="checked" />
+                      <span>Todos os dias</span>
+                    </label>
+                  </div>
+                  <br/>
+                  <br/>
+                  <div class="col s1">
+                    <label>
+                      <input type="checkbox" name="segunda" class="filled-in" checked="checked" />
+                      <span>2ª  </span>
+                    </label>
+                  </div>
+                  <div class="col s1">
+                    <label>
+                      <input type="checkbox" name="terca" class="filled-in" checked="checked" />
+                      <span>3ª  </span>
+                    </label>
+                  </div>
+                  <div class="col s1">
+                    <label>
+                      <input type="checkbox" name="quarta" class="filled-in" checked="checked" />
+                      <span>4ª  </span>
+                    </label>
+                  </div>
+                  <div class="col s1">
+                    <label>
+                      <input type="checkbox" name="quinta" class="filled-in" checked="checked" />
+                      <span>5ª  </span>
+                    </label>
+                  </div>
+                  <div class="col s1">
+                    <label>
+                      <input type="checkbox" name="sexta" class="filled-in" checked="checked" />
+                      <span>6ª  </span>
+                    </label>
+                  </div>
+                  <div class="col s2">
+                    <label>
+                      <input type="checkbox" name="sabado" class="filled-in" checked="checked" />
+                      <span>Sab.  </span>
+                    </label>
+                  </div>
+                  <div class="col s2">
+                    <label>
+                      <input type="checkbox" name="domingo" class="filled-in" checked="checked" />
+                      <span>Dom.  </span>
+                    </label>
+                  </div>
+
                 </div>
               </div>
               <div class="row card">
@@ -463,30 +484,30 @@ and open the template in the editor.
                   <div class="col s2">
                     <a class="grey-text text-darken-4 center-align">Durante: </a>
                   </div>
-                  <div class="col s4">
+                  <div class="col s4 card">
                     <select>
                       <option value="indefinidamente" selected="">Indefinidamente</option>
                       <option value="dias">Dias</option>
                       <option value="meses">Meses</option>
                     </select>
                   </div>
-                  <div class="col s2">
+                  <div class="col s2 card">
                     <input type="number" name="timeDayMonth" min="1">
                   </div>
                 </div>
               </div>
               <div class="row card">
                 <div class="input-field col s12">
-                  <div class="col s2">
+                  <div class="col s1">
                     <a class="grey-text text-darken-4 center-align">Hora: </a>
                   </div>
-                  <div class="col s2">
+                  <div class="col s2 card">
                     <input type="number" name="timeHour" min="0" max="23">
                   </div>
                   <div class="col s1">
                     <a class="grey-text text-darken-4 center-align">:</a>
                   </div>
-                  <div class="col s2">
+                  <div class="col s2 card">
                     <input type="number" name="timeMinute" min="0" max="59">
                   </div>
                   <div class="col s1">
@@ -496,31 +517,43 @@ and open the template in the editor.
               </div>
               <div class="row card">
                 <div class="input-field col s12">
-                  <a class="grey-text text-darken-4 center-align">Quem vai usar a caixa: </a>
-                  <label>
-                    <input name="group1" type="radio" checked />
-                    <span>João</span>
-                  </label>
-                  <label>
-                    <input name="group1" type="radio" />
-                    <span>Outro</span>
-                  </label>
+                  <div class="col s4">
+                    <a class="grey-text text-darken-4 center-align">Quem vai usar a caixa: </a>
+                  </div>
+                  <div class="col s2">
+                    <label>
+                      <input name="group1" type="radio" checked />
+                      <span>João</span>
+                    </label>
+                  </div>
+                  <div class="col s2">
+                    <label>
+                      <input name="group1" type="radio" />
+                      <span>Outro</span>
+                    </label>
+                  </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row card">
                 <div class="input-field col s12">
-                  <a class="grey-text text-darken-4 center-align">Adicionar notificação?: </a>
-                  <label>
-                    <input name="group2" type="radio" checked />
-                    <span>Sim</span>
-                  </label>
-                  <label>
-                    <input name="group2" type="radio" />
-                    <span>Não</span>
-                  </label>
+                  <div class="col s4">
+                    <a class="grey-text text-darken-4 center-align">Adicionar notificação?: </a>
+                  </div>
+                  <div class="col s2">
+                    <label>
+                      <input name="group2" type="radio" checked />
+                      <span>Sim</span>
+                    </label>
+                  </div>
+                  <div class="col s2">
+                    <label>
+                      <input name="group2" type="radio" />
+                      <span>Não</span>
+                    </label>
+                  </div>
                 </div>
               </div>
-              <a class="modal-close waves-effect waves-green btn-flat" onclick="finishBox()">Concluido</a>
+              <a class="modal-close btn waves-effect grey-text text-darken-4 waves-light" onclick="finishBox()">Concluido</a>
             </form>
           </div>
         </div>
@@ -697,7 +730,7 @@ and open the template in the editor.
                 </div>
                 <!--
                 <div class="input-field col s3">
-                    <input placeholder="Efeito" id="efeito" type="text">
+                  <input placeholder="Efeito" id="efeito" type="text">
                   <label for="efeito">Efeito:</label>
 
                   -->
