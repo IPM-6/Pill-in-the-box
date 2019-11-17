@@ -805,19 +805,19 @@ and open the template in the editor.
               </div>
               <div class="row">
                 <div class="input-field col s3">
-                  <input placeholder="Nome" id="pillName" type="text">
+                  <input placeholder="Nome" id="pillNameShop" type="text">
                   <label for="pillName">Nome do comprimido:
                     <span class="red-text text-darken-2">*</span>
                   </label>
                 </div>
                 <div class="input-field col s3">
-                  <input placeholder="Quantidade" id="pillAmount" type="text">
+                  <input placeholder="Quantidade" id="pillAmountShop" type="text">
                   <label for="pillAmount">Quantidade:
                     <span class="red-text text-darken-2">*</span>
                   </label>
                 </div>
                 <div class="input-field col s3">
-                  <input placeholder="Preço" id="pillPrice" type="text">
+                  <input placeholder="Preço" id="pillPriceShop" type="text">
                   <label for="pillPrice">Preço:</label>
                 </div>
               </div>
@@ -825,7 +825,7 @@ and open the template in the editor.
                 <form action="#">
                   <p>
                     <label>
-                      <input id="receipt" type="checkbox" class="filled-in" checked="unchecked"/>
+                      <input id="receiptShop" type="checkbox" class="filled-in" checked="unchecked"/>
                       <span>Sim</span>
                     </label>
                   </p>
@@ -929,15 +929,43 @@ and open the template in the editor.
     </script>
     <script>
       function validateShopForm() {
-        var pillName = document.getElementById("pillName").value;
-        var pillAmount = document.getElementById("pillAmount").value;
-        var medicReceipt = document.getElementById("receipt").checked;
-        if (pillName == null || pillAmount == null || medicReceipt == null) {
-          alert("Erro: informação necessária não preenchida.");
+        var pillName = document.getElementById("pillNameShop").value;
+        var pillAmount = document.getElementById("pillAmountShop").value;
+        console.log("ParseInt: " + parseInt(pillAmount));
+        console.log("ParseFloat: " + parseFloat(pillAmount));
+        var medicReceipt = document.getElementById("receiptShop").checked;
+        console.log("Pill Name: " + pillName);
+        console.log("Pill Amount: " + pillAmount);
+        console.log("Receipt: " + medicReceipt);
+        if (pillName == "" || pillAmount == "" || medicReceipt == null) {
+        	console.log("Gonna alert!");
+        	alert("Erro: informação necessária não preenchida.");
+        } else if (!Number.isInteger(parseFloat(pillAmount))) {
+        	console.log("pillAmount not int")
+        	alert("Erro: quantidade de comprimidos deve ser número inteiro!");
         } else {
-          var pillPrice = document.getElementById("pillPrice").value;
-          this.addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt);
+        	console.log("Adding new Pill else!");
+        	var pillPrice = document.getElementById("pillPriceShop").value;
+        	if (isNaN(pillPrice)) {
+        		console.log("price not a number!");
+        		alert("Erro: preço dos comprimidos deve ser um número!");
+        	} else {
+        		console.log("addingNewPillTO SHopping list!")
+        		this.addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt);
+        	}
         }
+        this.cleanForm();
+      }
+
+      function cleanForm() {
+      	document.getElementById("pillNameShop").value = "";
+      	document.getElementById("pillAmountShop").value = "";
+      	document.getElementById("receiptShop").checked = true;
+      	document.getElementById("pillPriceShop").value = "";
+      }
+
+      function addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt) {
+
       }
     </script>
 
