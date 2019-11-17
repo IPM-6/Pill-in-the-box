@@ -670,19 +670,30 @@ and open the template in the editor.
               <div class="row">
                 <div class="input-field col s3">
                   <input placeholder="Nome" id="pillName" type="text">
-                  <label for="pillName">Nome do comprimido:
-                    <span class="red-text text-darken-2">*</span>
-                  </label>
+                  <label for="pillName">Nome do comprimido:</label>
                 </div>
+
                 <div class="input-field col s3">
                   <input placeholder="Quantidade" id="pillAmount" type="text">
-                  <label for="pillAmount">Quantidade:
-                    <span class="red-text text-darken-2">*</span>
-                  </label>
+                  <label for="pillAmount">Quantidade: </label>
                 </div>
+                <!--
                 <div class="input-field col s3">
                     <input placeholder="Efeito" id="efeito" type="text">
                   <label for="efeito">Efeito:</label>
+
+                  -->
+                  <div class="row">
+                    <div class="col s12">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input type="text" id="autocomplete-input" class="autocomplete">
+                          <label for="autocomplete-input">Efeito</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
@@ -880,7 +891,20 @@ and open the template in the editor.
     </script>
 
     <!--AQUI-->
-    <script>
+    <script> //Stock Formulario de adicionar comprimidos
+      //Autocomplete para os Efeitos
+      $(document).ready(function(){
+        $('input.autocomplete').autocomplete({
+          data: {
+            "Analgesico": null,
+            "Microsoft": null,
+            "Google": null
+          },
+        });
+      });
+
+
+      //Adicionar o novo pill ao html
       function addPillToStock() {
         var pillName = document.getElementById("pillName").value;
         var pillAmount = document.getElementById("pillAmount").value;
