@@ -391,68 +391,66 @@ and open the template in the editor.
         <div id="modal3" class="modal">
           <div class="modal-content">
             <form class="col s12">
-              <div class="row">
+              <div class="row card">
                 <div class="input-field col s12">
                   <input id="boxname" type="text" class="validate">
                   <label for="boxname">Nome da caixa</label>
                   <span class="helper-text" data-error="Errado" data-success="Certo"></span>
                 </div>
               </div>
-              <div class="row">
+              <div class="row card">
                 <div class="input-field col s12">
                   <input id="pillname1" type="text" class="validate">
                   <label for="pillname1">Nome do comprimido</label>
                   <span class="helper-text" data-error="Errado" data-success="Certo"></span>
                 </div>
-              </div>
-              <div class="row">
                 <div class="col s12">
                   <div class="col s5">
                     <a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>
                   </div>
                   <div class="col s2">
-                    <input type="number" name="quantity" min="1">
+                    <input class="" type="number" name="quantity" min="1">
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col s12">
+              <div class="row card">
+                <div class="col s12 center-align">
                   <a href="#!" class="waves-effect grey-text text-darken-4">
                     <i class="material-icons large">add</i>
                   </a>
                   <a class="grey-text text-darken-4 center-align">Adicionar comprimido</a>
                 </div>
               </div>
-              <div class="row">
+              <div class="row card">
                 <div class="col s12">
                   <a class="grey-text text-darken-4 right-align">Periodicidade: </a>
                   <label>
                     <input type="checkbox" name="segunda" class="filled-in" checked="checked" />
-                    <span>2ª</span>
+                    <span>2ª  </span>
                   </label>
                   <label>
                     <input type="checkbox" name="terca" class="filled-in" checked="checked" />
-                    <span>3ª</span>
+                    <span>3ª  </span>
                   </label>
                   <label>
                     <input type="checkbox" name="quarta" class="filled-in" checked="checked" />
-                    <span>4ª</span>
+                    <span>4ª  </span>
                   </label>
                   <label>
                     <input type="checkbox" name="quinta" class="filled-in" checked="checked" />
-                    <span>5ª</span>
+                    <span>5ª  </span>
                   </label>
                   <label>
                     <input type="checkbox" name="sexta" class="filled-in" checked="checked" />
-                    <span>6ª</span>
+                    <span>6ª  </span>
                   </label>
                   <label>
                     <input type="checkbox" name="sabado" class="filled-in" checked="checked" />
-                    <span>Sab.</span>
+                    <span>Sab.  </span>
                   </label>
                   <label>
                     <input type="checkbox" name="domingo" class="filled-in" checked="checked" />
-                    <span>Dom.</span>
+                    <span>Dom.  </span>
                   </label>
                   <label>
                     <input type="checkbox" name="todosDias" class="filled-in" checked="checked" />
@@ -460,27 +458,43 @@ and open the template in the editor.
                   </label>
                 </div>
               </div>
-              <div class="row">
+              <div class="row card">
                 <div class="input-field col s12">
-                  <a class="grey-text text-darken-4 center-align">Durante: </a>
-                  <select>
-                    <option value="indefinidamente" selected="">Indefinidamente</option>
-                    <option value="dias">Dias</option>
-                    <option value="meses">Meses</option>
-                  </select>
-                  <input type="number" name="timeDayMonth" min="1">
+                  <div class="col s2">
+                    <a class="grey-text text-darken-4 center-align">Durante: </a>
+                  </div>
+                  <div class="col s4">
+                    <select>
+                      <option value="indefinidamente" selected="">Indefinidamente</option>
+                      <option value="dias">Dias</option>
+                      <option value="meses">Meses</option>
+                    </select>
+                  </div>
+                  <div class="col s2">
+                    <input type="number" name="timeDayMonth" min="1">
+                  </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row card">
                 <div class="input-field col s12">
-                  <a class="grey-text text-darken-4 center-align">Hora: </a>
-                  <input type="number" name="timeHour" min="0" max="23">
-                  <a class="grey-text text-darken-4 center-align">:</a>
-                  <input type="number" name="timeMinute" min="0" max="59">
-                  <a class="grey-text text-darken-4 center-align">h</a>
+                  <div class="col s2">
+                    <a class="grey-text text-darken-4 center-align">Hora: </a>
+                  </div>
+                  <div class="col s2">
+                    <input type="number" name="timeHour" min="0" max="23">
+                  </div>
+                  <div class="col s1">
+                    <a class="grey-text text-darken-4 center-align">:</a>
+                  </div>
+                  <div class="col s2">
+                    <input type="number" name="timeMinute" min="0" max="59">
+                  </div>
+                  <div class="col s1">
+                    <a class="grey-text text-darken-4 center-align">h</a>
+                  </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row card">
                 <div class="input-field col s12">
                   <a class="grey-text text-darken-4 center-align">Quem vai usar a caixa: </a>
                   <label>
