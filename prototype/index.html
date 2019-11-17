@@ -965,7 +965,34 @@ and open the template in the editor.
       }
 
       function addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt) {
+      	var shoppingList = document.getElementById("pillsToShop");
+      	console.log(shoppingList);
+      	var pillRow = document.createElement("tr");
+      	console.log(pillRow);
+      	var pillCol1 = document.createElement("td");
+      	var pillCol2 = document.createElement("td");
+      	var pillCol3 = document.createElement("td");
+      	var pillCol4 = document.createElement("td"); 
+      	pillCol1.innerHTML = pillName;
+      	if (medicReceipt == false) {
+      		pillCol2.innerHTML = "Não";
+      	} else {
+      		pillCol2.innerHTML = "Sim";
+      	}
+      	console.log("Pill price: " + pillPrice);
+      	console.log(typeof(pillPrice));
+      	if (pillPrice == "") {
+      		pillCol3.innerHTML = "-";
+      	} else {
+      		pillCol3.innerHTML = pillPrice;
+      	}
+      	pillRow.appendChild(pillCol1);
+      	pillRow.appendChild(pillCol2);
+      	pillRow.appendChild(pillCol3);
+      	console.log(pillCol3);
+      	//pillRow.appendChild(pillCol4);
 
+		shoppingList.insertBefore(pillRow, shoppingList.childNodes[0]);
       }
     </script>
 
