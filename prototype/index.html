@@ -46,7 +46,7 @@ and open the template in the editor.
               <div class="col s4">
                 <ul class="tabs">
                   <li class="tab col s3">
-                    <a href="#caixa"><i class="material-icons">home</i></a>
+                    <a href="#caixas"><i class="material-icons">home</i></a>
                   </li>
                   <li class="tab col s3">
                     <a href="#stock"><i class="material-icons">pie_chart_outlined</i></a>
@@ -161,7 +161,7 @@ and open the template in the editor.
     </header>
     <main class="container">
 
-      <div id="caixa" class="row">
+      <div id="caixas" class="row">
 
         <div class="row center-align valign-wrapper">
           <div class="input-field col s2">
@@ -255,74 +255,75 @@ and open the template in the editor.
           </div>
           <br/>
         </div>
-
-        <div class="row valign-wrapper">
-          <div class="col s5 left-align">
-            <h4>Nome da Caixa</h4>
+        <div id="caixa">
+          <div class="row valign-wrapper">
+            <div class="col s5 left-align">
+              <h4>Nome da Caixa</h4>
+            </div>
+            <div class="col s5 right-align">
+              <span>Dono</span>
+            </div>
+            <div class="col s2">
+            </div>
           </div>
-          <div class="col s5 right-align">
-            <span>Dono</span>
-          </div>
-          <div class="col s2">
-          </div>
-        </div>
-        <div class="row valign-wrapper">
-          <div class="col s10">
-            <div class="row z-depth-5 center-align">
-              <div class="col s3">
-                <div class="card">
-                  <span class="card-title">Nome do Comprimido</span>
-                  <div class="card-action">
-                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+          <div class="row valign-wrapper">
+            <div class="col s10">
+              <div class="row z-depth-5 center-align">
+                <div class="col s3">
+                  <div class="card">
+                    <span class="card-title">Nome do Comprimido</span>
+                    <div class="card-action">
+                      <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col s3">
-                <div class="card">
-                  <span class="card-title">Nome do Comprimido</span>
-                  <div class="card-action">
-                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                <div class="col s3">
+                  <div class="card">
+                    <span class="card-title">Nome do Comprimido</span>
+                    <div class="card-action">
+                      <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col s3">
-                <div class="card">
-                  <span class="card-title">Nome do Comprimido</span>
-                  <div class="card-action">
-                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                <div class="col s3">
+                  <div class="card">
+                    <span class="card-title">Nome do Comprimido</span>
+                    <div class="card-action">
+                      <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col s3">
-                <div class="card">
-                  <span class="card-title">Nome do Comprimido</span>
-                  <div class="card-action">
-                    <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                <div class="col s3">
+                  <div class="card">
+                    <span class="card-title">Nome do Comprimido</span>
+                    <div class="card-action">
+                      <button class="btn waves-effect grey-text text-darken-4">Quantidade</button>
+                    </div>
                   </div>
                 </div>
+                <div class="col s3">
+                  <a href="#!" class="waves-effect grey-text text-darken-4">
+                    <i class="material-icons large">add</i>
+                  </a>
+                </div>
               </div>
-              <div class="col s3">
-                <a href="#!" class="waves-effect grey-text text-darken-4">
-                  <i class="material-icons large">add</i>
+            </div>
+            <div class="col s2 center">
+              <div class="row">
+                <a class="grey-text text-darken-4">
+                  <i class="material-icons medium">edit</i>
                 </a>
               </div>
-            </div>
-          </div>
-          <div class="col s2 center">
-            <div class="row">
-              <a class="grey-text text-darken-4">
-                <i class="material-icons medium">edit</i>
-              </a>
-            </div>
-            <div class="row">
-              <button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>
-            </div>
-            <div class="row">
-              <div class="col s6">
-                <span>Hora</span>
+              <div class="row">
+                <button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>
               </div>
-              <div class="col s6">
-                <span>Data</span>
+              <div class="row">
+                <div class="col s6">
+                  <span>Hora</span>
+                </div>
+                <div class="col s6">
+                  <span>Data</span>
+                </div>
               </div>
             </div>
           </div>
@@ -409,13 +410,13 @@ and open the template in the editor.
                     <a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>
                   </div>
                   <div class="col s2 card">
-                    <input id="numPill1" class="" type="number" name="quantity" min="1">
+                    <input id="numPill1" class="numPills" type="number" name="quantity" min="1">
                   </div>
                 </div>
               </div>
               <div class="row card">
                 <div class="col s12 center-align">
-                  <a href="#!" class="waves-effect grey-text text-darken-4">
+                  <a href="#!" class="waves-effect grey-text text-darken-4" onclick="newPill()">
                     <i class="material-icons large">add</i>
                   </a>
                   <a class="grey-text text-darken-4 center-align">Adicionar comprimido</a>
@@ -436,43 +437,43 @@ and open the template in the editor.
                   <br/>
                   <div class="col s1">
                     <label>
-                      <input id="dayOfTheWeek" type="checkbox" name="segunda" class="filled-in" checked="checked" />
+                      <input id="segunda" type="checkbox" name="segunda" class="filled-in dayOfTheWeek" checked="checked" />
                       <span>2ª  </span>
                     </label>
                   </div>
                   <div class="col s1">
                     <label>
-                      <input id="dayOfTheWeek" type="checkbox" name="terca" class="filled-in" checked="checked" />
+                      <input id="terca" type="checkbox" name="terca" class="filled-in dayOfTheWeek" checked="checked" />
                       <span>3ª  </span>
                     </label>
                   </div>
                   <div class="col s1">
                     <label>
-                      <input id="dayOfTheWeek" type="checkbox" name="quarta" class="filled-in" checked="checked" />
+                      <input id="quarta" type="checkbox" name="quarta" class="filled-in dayOfTheWeek" checked="checked" />
                       <span>4ª  </span>
                     </label>
                   </div>
                   <div class="col s1">
                     <label>
-                      <input id="dayOfTheWeek" type="checkbox" name="quinta" class="filled-in" checked="checked" />
+                      <input id="quinta" type="checkbox" name="quinta" class="filled-in dayOfTheWeek" checked="checked" />
                       <span>5ª  </span>
                     </label>
                   </div>
                   <div class="col s1">
                     <label>
-                      <input id="dayOfTheWeek" type="checkbox" name="sexta" class="filled-in" checked="checked" />
+                      <input id="sexta" type="checkbox" name="sexta" class="filled-in dayOfTheWeek" checked="checked" />
                       <span>6ª  </span>
                     </label>
                   </div>
                   <div class="col s2">
                     <label>
-                      <input id="dayOfTheWeek" type="checkbox" name="sabado" class="filled-in" checked="checked" />
+                      <input id="sabado" type="checkbox" name="sabado" class="filled-in dayOfTheWeek" checked="checked" />
                       <span>Sab.  </span>
                     </label>
                   </div>
                   <div class="col s2">
                     <label>
-                      <input id="dayOfTheWeek" type="checkbox" name="domingo" class="filled-in" checked="checked" />
+                      <input id="domingo" type="checkbox" name="domingo" class="filled-in dayOfTheWeek" checked="checked" />
                       <span>Dom.  </span>
                     </label>
                   </div>
@@ -485,7 +486,7 @@ and open the template in the editor.
                     <a class="grey-text text-darken-4 center-align">Durante: </a>
                   </div>
                   <div class="col s4 card">
-                    <select class="selectDayMonth">
+                    <select id="selectDayMonth">
                       <option value="indefinidamente" selected="">Indefinidamente</option>
                       <option value="dias">Dias</option>
                       <option value="meses">Meses</option>
@@ -498,21 +499,7 @@ and open the template in the editor.
               </div>
               <div class="row card">
                 <div class="input-field col s12">
-                  <div class="col s1">
-                    <a class="grey-text text-darken-4 center-align">Hora: </a>
-                  </div>
-                  <div class="col s2 card">
-                    <input id="timeHour" type="number" name="timeHour" min="0" max="23">
-                  </div>
-                  <div class="col s1">
-                    <a class="grey-text text-darken-4 center-align">:</a>
-                  </div>
-                  <div class="col s2 card">
-                    <input id="timeMinute" type="number" name="timeMinute" min="0" max="59">
-                  </div>
-                  <div class="col s1">
-                    <a class="grey-text text-darken-4 center-align">h</a>
-                  </div>
+                  <input id="timeHourMinute" type="text" class="timepicker">
                 </div>
               </div>
               <div class="row card">
@@ -916,6 +903,7 @@ and open the template in the editor.
                 });
                 $('.modal').modal();
                 $('select').formSelect();
+                $('.timepicker').timepicker({twelveHour: false});
               });
   </script>
   <script>

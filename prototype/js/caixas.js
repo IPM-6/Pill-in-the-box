@@ -14,5 +14,51 @@ function deselectAll(){
 
 function addBox(){
   var boxName = document.getElementById("boxname");
-  var pillNames = document.getElementsByClass("pillnames");
+  
+  var pillNames = document.getElementsByClassName("pillnames");
+  var numPills = document.getElementsByClassName("numPills");
+  
+  var dayOfTheWeek = document.getElementsByClassName("dayOfTheWeek");
+  
+  var selectDayMonth = document.getElementById("selectDayMonth");
+  var timeDayMonth = document.getElementById("timeDayMonth");
+  
+  var timeHourMinute = document.getElementById("timeHourMinute");
+  
+  var dono = document.getElementsByClassName("dono");
+  var notificacao = document.getElementsByClassName("notificacao");
+  
+  var content = '<div class="row valign-wrapper"><div class="col s5 left-align"><h4>';
+  content += boxName.value + '</h4></div><div class="col s5 right-align"><span>';
+  for (var i = 0; i < pillNames.length; i++){
+    if(dono[i].checked){
+      content += dono[i].value;
+    }
+  }
+  content += '</span></div><div class="col s2"></div></div><div class="row valign-wrapper">';
+  content += '<div class="col s10"><div class="row z-depth-5 center-align">';
+  for (var i = 0; i < pillNames.length; i++){
+    content += '<div class="col s3"><div class="card"><span class="card-title">';
+    content += pillNames[i].value + '</span><div class="card-action">';
+    content += '<button class="btn waves-effect grey-text text-darken-4">';
+    content += numPills[i].value + '</button></div></div></div>';
+  }
+  content += '<div class="col s3"><a href="#!" class="waves-effect grey-text text-darken-4">';
+  content += '<i class="material-icons large">add</i></a></div></div></div><div class="col s2 center">';
+  content += '<div class="row"><a class="grey-text text-darken-4" onclick="addPill()">';
+  content += '<i class="material-icons medium">edit</i></a></div><div class="row">';
+  content += '<button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>';
+  content += '</div><div class="row"><div class="col s6"><span>' + timeHourMinute.value;
+  content += '</span></div><div class="col s6"><span>' + timeDayMonth.value;
+  content += '</span></div></div></div></div>';
+  
+  document.getElementById('caixa').innerHTML = content;
+}
+
+function newPill(){
+  
+}
+
+function addPill(){
+
 }
