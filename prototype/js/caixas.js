@@ -13,5 +13,6 @@ function deselectAll(){
 }
 
 function addBox(){
-  
+  var boxName = document.getElementById("boxname");
+  var pillNames = document.getElementsByClass("pillnames");
 }

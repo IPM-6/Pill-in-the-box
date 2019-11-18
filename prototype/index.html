@@ -400,7 +400,7 @@ and open the template in the editor.
               </div>
               <div class="row card">
                 <div class="input-field col s12">
-                  <input id="pillname1" type="text" class="validate">
+                  <input id="pillname1" type="text" class="validate pillnames">
                   <label for="pillname1">Nome do comprimido</label>
                   <span class="helper-text" data-error="Errado" data-success="Certo"></span>
                 </div>
@@ -485,14 +485,14 @@ and open the template in the editor.
                     <a class="grey-text text-darken-4 center-align">Durante: </a>
                   </div>
                   <div class="col s4 card">
-                    <select>
+                    <select class="selectDayMonth">
                       <option value="indefinidamente" selected="">Indefinidamente</option>
                       <option value="dias">Dias</option>
                       <option value="meses">Meses</option>
                     </select>
                   </div>
                   <div class="col s2 card">
-                    <input type="number" name="timeDayMonth" min="1">
+                    <input id="timeDayMonth" type="number" name="timeDayMonth" min="1">
                   </div>
                 </div>
               </div>
@@ -502,13 +502,13 @@ and open the template in the editor.
                     <a class="grey-text text-darken-4 center-align">Hora: </a>
                   </div>
                   <div class="col s2 card">
-                    <input type="number" name="timeHour" min="0" max="23">
+                    <input id="timeHour" type="number" name="timeHour" min="0" max="23">
                   </div>
                   <div class="col s1">
                     <a class="grey-text text-darken-4 center-align">:</a>
                   </div>
                   <div class="col s2 card">
-                    <input type="number" name="timeMinute" min="0" max="59">
+                    <input id="timeMinute" type="number" name="timeMinute" min="0" max="59">
                   </div>
                   <div class="col s1">
                     <a class="grey-text text-darken-4 center-align">h</a>
@@ -522,13 +522,13 @@ and open the template in the editor.
                   </div>
                   <div class="col s2">
                     <label>
-                      <input name="group1" type="radio" checked />
+                      <input class="dono" name="group1" type="radio" checked />
                       <span>João</span>
                     </label>
                   </div>
                   <div class="col s2">
                     <label>
-                      <input name="group1" type="radio" />
+                      <input class="dono" name="group1" type="radio" />
                       <span>Outro</span>
                     </label>
                   </div>
@@ -541,13 +541,13 @@ and open the template in the editor.
                   </div>
                   <div class="col s2">
                     <label>
-                      <input name="group2" type="radio" checked />
+                      <input class="notificacao" name="group2" type="radio" checked />
                       <span>Sim</span>
                     </label>
                   </div>
                   <div class="col s2">
                     <label>
-                      <input name="group2" type="radio" />
+                      <input class="notificacao" name="group2" type="radio" />
                       <span>Não</span>
                     </label>
                   </div>
