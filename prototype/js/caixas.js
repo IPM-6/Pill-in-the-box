@@ -11,3 +11,7 @@ function deselectAll(){
     x[i].checked = "";
   }
 }
+
+function addBox(){
+  
+}
