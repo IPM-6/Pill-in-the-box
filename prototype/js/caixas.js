@@ -50,7 +50,7 @@ function addBox(){
   content += '<button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>';
   content += '</div><div class="row"><div class="col s6"><span>' + timeHourMinute.value;
   content += '</span></div><div class="col s6"><span>' + timeDayMonth.value;
-  content += '</span></div></div></div></div>';
+  content += '</span></div></div></div></div><div class="divider"> </div>';
   
   document.getElementById('caixa').innerHTML = content;
 }
