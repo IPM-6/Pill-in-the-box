@@ -28,14 +28,14 @@ function addBox(){
   var dono = document.getElementsByClassName("dono");
   var notificacao = document.getElementsByClassName("notificacao");
   
-  var content = '<div class="row valign-wrapper"><div class="col s5 left-align"><h4>';
-  content += boxName.value + '</h4></div><div class="col s5 right-align"><span>';
+  var content = '<div class="row"><div class="col s5 left-align"><h4>';
+  content += boxName.value + '</h4></div><div class="col s5 right-align"><h5>';
   for (var i = 0; i < pillNames.length; i++){
     if(dono[i].checked){
       content += dono[i].value;
     }
   }
-  content += '</span></div><div class="col s2"></div></div><div class="row valign-wrapper">';
+  content += '</h5></div><div class="col s2"></div></div><div class="row valign-wrapper">';
   content += '<div class="col s10"><div class="row z-depth-5 center-align">';
   for (var i = 0; i < pillNames.length; i++){
     content += '<div class="col s3"><div class="card"><span class="card-title">';
@@ -49,16 +49,35 @@ function addBox(){
   content += '<i class="material-icons medium">edit</i></a></div><div class="row">';
   content += '<button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>';
   content += '</div><div class="row"><div class="col s6"><span>' + timeHourMinute.value;
-  content += '</span></div><div class="col s6"><span>' + timeDayMonth.value;
+  content += '</span></div><div class="col s6"><span>' + timeDayMonth.value + ' ' + selectDayMonth.value;
   content += '</span></div></div></div></div><div class="divider"> </div>';
   
-  document.getElementById('caixa').innerHTML = content;
+  document.getElementById('caixa').innerHTML += content;
+  
+  document.getElementById("boxname").value = "";
 }
 
 function newPill(){
-  
+  var id = new Date;
+  console.log(id);
+  var content = '<div class="row card">';
+  content += '<div class="input-field col s12">';
+  content += '<input id="pillname' + id + '" type="text" class="validate pillnames">';
+  content += '<label for="pillname' + id + '">Nome do comprimido</label>';
+  content += '<span class="helper-text" data-error="Errado" data-success="Certo"></span>';
+  content += '</div>';
+  content += '<div class="col s12">';
+  content += '<div class="col s5">';
+  content += '<a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>';
+  content += '</div>';
+  content += '<div class="col s2 card">';
+  content += '<input id="numPill1" class="numPills" type="number" name="quantity" min="1">';
+  content += '</div>';
+  content += '</div>';
+  content += '</div>';
+  document.getElementById('addedPills').innerHTML += content;
 }
 
 function addPill(){
-
+  
 }

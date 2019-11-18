@@ -255,7 +255,10 @@ and open the template in the editor.
           </div>
           <br/>
         </div>
-        <div id="caixa">
+        <div class="row col s12 ">
+          <a href="#modal3" class="modal-trigger btn waves-effect grey-text text-darken-4 waves-light">Nova caixa</a>
+        </div>
+        <div id="caixa" class="row">
 
         </div>
 
@@ -269,18 +272,20 @@ and open the template in the editor.
                   <span class="helper-text" data-error="Errado" data-success="Certo"></span>
                 </div>
               </div>
-              <div class="row card">
-                <div class="input-field col s12">
-                  <input id="pillname1" type="text" class="validate pillnames">
-                  <label for="pillname1">Nome do comprimido</label>
-                  <span class="helper-text" data-error="Errado" data-success="Certo"></span>
-                </div>
-                <div class="col s12">
-                  <div class="col s5">
-                    <a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>
+              <div id="addedPills">
+                <div class="row card">
+                  <div class="input-field col s12">
+                    <input id="pillname1" type="text" class="validate pillnames">
+                    <label for="pillname1">Nome do comprimido</label>
+                    <span class="helper-text" data-error="Errado" data-success="Certo"></span>
                   </div>
-                  <div class="col s2 card">
-                    <input id="numPill1" class="numPills" type="number" name="quantity" min="1">
+                  <div class="col s12">
+                    <div class="col s5">
+                      <a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>
+                    </div>
+                    <div class="col s2 card">
+                      <input id="numPill1" class="numPills" type="number" name="quantity" min="1">
+                    </div>
                   </div>
                 </div>
               </div>
