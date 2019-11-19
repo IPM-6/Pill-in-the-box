@@ -70,7 +70,7 @@
               </div>
               <div class="input-field col s3">
                 <input placeholder="Quantidade" id="pillAmountShop" type="text">
-                <label for="pillAmount">Quantidade:
+                <label for="pillAmount">Quantidade por caixa:
                   <span class="red-text text-darken-2">*</span>
                 </label>
               </div>
@@ -104,7 +104,7 @@
         <div class="modal-content">
           <form class="col s9">
             <div class="row">
-              <b size=12>Quantidade comprada:</b>
+              <b size=12>Nº de caixas compradas:</b>
             </div>
             <div class="row">
               <div class="input-field col s3">
@@ -182,7 +182,11 @@
           alert("Erro: quantidade comprada deve ser número inteiro!");
         } else {
           //add pills bought to stock
-          this.deleteShopPill();
+          var totalPillsBought = this.currentPillPerBox * amountBought;
+          console.log("Total pills bought: " + totalPillsBought);
+          this.deleteShopPill(this.currentPillName);
+          console.log("Deleted successfully pill: " + this.currentPillName);
+          console.log("Deleted successfully pill amount: " + this.currentPillPerBox);
         }
         this.cleanForm2();
       }
@@ -197,6 +201,9 @@
       function cleanForm2() {
         document.getElementById("pillAmountBought").value = "";
       }
+
+      var currentPillName = "";
+      var currentPillPerBox = undefined;
 
       function addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt) {
         var shoppingList = document.getElementById("pillsToShop");
@@ -224,7 +231,7 @@
         }
 
         //row with buttons
-        content = '<a class="btn-floating btn-small waves-effect waves-light green modal-trigger" href="#shopForm2" onclick="setParameterstoknowWhichPillTomorrow"><i class="material-icons">check</i></a>';
+        content = '<a class="btn-floating btn-small waves-effect waves-light green modal-trigger" href="#shopForm2"  id="\'' + pillName + '\'"><i class="material-icons">check</i></a>';
         content += '<a class="btn-floating btn-small waves-effect waves-light red" onclick="deleteShopPill(\'' + pillName + '\')"><i class="material-icons">clear</i></a>';
         content += '<a class="btn-floating btn-small waves-effect waves-light black modal-trigger" onclick="editShopPill()"><i class="material-icons">create</i></a>';
         pillCol4.innerHTML = content;
@@ -235,6 +242,21 @@
         pillRow.appendChild(pillCol4);
 
         shoppingList.insertBefore(pillRow, shoppingList.childNodes[0]);
+
+        //buy button event
+        button = document.getElementById("'" + pillName + "'");
+        console.log("Button added with event:");
+        console.log(button);
+        button.addEventListener('click', function(){
+          setParameters(pillName, pillAmount);
+        });
+      }
+      
+      function setParameters(pillName, pillPerBox) {
+        console.log("Changed pill name from, to: " + this.currentPillName + ", " + pillName);
+        console.log("Changed pill amount from, to: " + this.currentPillPerBox + ", " + pillPerBox);
+        this.currentPillName = pillName;
+        this.currentPillPerBox = pillPerBox;
       }
 
       function deleteShopPill(pillName) {
