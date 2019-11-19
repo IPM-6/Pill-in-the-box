@@ -1,0 +1,297 @@
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
+    <title>Index</title>
+
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="row center-align valign-wrapper">
+        <div class="input-field col s2">
+          <select>
+            <option value="hour" selected>Hora</option>
+            <option value="person">Pessoa</option>
+          </select>
+          <label class="flow-text">Organizar por:</label>
+        </div>
+        <div class="col s6">
+          <div class="row valign-wrapper">
+            <div class="col s10" style="height:110px; overflow:auto;">
+              <table class="striped">
+                <tr>
+                  <td>
+                    <label>
+                      <input type="checkbox"/>
+                      <span>Person</span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="checkbox"/>
+                      <span>Person</span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="checkbox"/>
+                      <span>Person</span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      <input type="checkbox"/>
+                      <span>Person</span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="checkbox"/>
+                      <span>Person</span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="checkbox"/>
+                      <span>Person</span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      <input type="checkbox"/>
+                      <span>Person</span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="checkbox"/>
+                      <span>Person</span>
+                    </label>
+                  </td>
+                  <td>
+                    <label>
+                      <input type="checkbox"/>
+                      <span>Person</span>
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col s2">
+              <a class="btn-floating modal-trigger" href="#modal3">
+                <i class="material-icons">add</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col s3">
+          <br/>
+          <div class="row">
+            <a class="btn waves-effect grey-text text-darken-4 waves-light">Selecionar Todos</a>
+          </div>
+          <div class="row">
+            <a class="btn waves-effect grey-text text-darken-4 waves-light">Desselecionar Todos</a>
+          </div>
+        </div>
+        <br/>
+      </div>
+
+      <div id="caixa" class="container">
+        <div class="row">
+          <a class="modal-trigger btn waves-effect grey-text text-darken-4 waves-light" href="#modal3">Criar nova caixa</a>
+        </div>
+
+      </div>
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <form class="col s12">
+            <div class="row card">
+              <div class="input-field col s12">
+                <input id="boxname" type="text" class="validate">
+                <label for="boxname">Nome da caixa</label>
+                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
+              </div>
+            </div>
+            <div id="addedPills">
+              <div class="row card">
+                <div class="input-field col s12">
+
+                  <input id="pillname1" type="text" class="validate pillnames">
+                  <label for="pillname1">Nome do comprimido</label>
+                  <span class="helper-text" data-error="Errado" data-success="Certo"></span>
+                </div>
+
+                <div class="col s12">
+                  <div class="col s5">
+                    <a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>
+                  </div>
+                  <div class="col s2 card">
+
+                    <input id="numPill1" class="numPills" type="number" name="quantity" min="1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row card">
+              <div class="col s12 center-align">
+                <a href="#!" class="waves-effect grey-text text-darken-4" onclick="newPill()">
+                  <i class="material-icons large">add</i>
+                </a>
+                <a class="grey-text text-darken-4 center-align">Adicionar comprimido</a>
+              </div>
+            </div>
+            <div class="row card">
+              <div class="col s12">
+                <div class="col s2">
+                  <a class="grey-text text-darken-4 right-align">Periodicidade: </a>
+                </div>
+                <div class="col s10 left-align">
+                  <label>
+                    <input type="checkbox" name="todosDias" class="filled-in" checked="checked" />
+                    <span>Todos os dias</span>
+                  </label>
+                </div>
+                <br/>
+                <br/>
+                <div class="col s1">
+                  <label>
+                    <input type="checkbox" name="segunda" class="filled-in" checked="checked" />
+                    <span>2ª  </span>
+                  </label>
+                </div>
+                <div class="col s1">
+                  <label>
+                    <input type="checkbox" name="terca" class="filled-in" checked="checked" />
+                    <span>3ª  </span>
+                  </label>
+                </div>
+                <div class="col s1">
+                  <label>
+                    <input type="checkbox" name="quarta" class="filled-in" checked="checked" />
+                    <span>4ª  </span>
+                  </label>
+                </div>
+                <div class="col s1">
+                  <label>
+                    <input type="checkbox" name="quinta" class="filled-in" checked="checked" />
+                    <span>5ª  </span>
+                  </label>
+                </div>
+                <div class="col s1">
+                  <label>
+                    <input type="checkbox" name="sexta" class="filled-in" checked="checked" />
+                    <span>6ª  </span>
+                  </label>
+                </div>
+                <div class="col s2">
+                  <label>
+                    <input type="checkbox" name="sabado" class="filled-in" checked="checked" />
+                    <span>Sab.  </span>
+                  </label>
+                </div>
+                <div class="col s2">
+                  <label>
+                    <input type="checkbox" name="domingo" class="filled-in" checked="checked" />
+                    <span>Dom.  </span>
+                  </label>
+                </div>
+
+              </div>
+            </div>
+            <div class="row card">
+              <div class="input-field col s12">
+                <div class="col s2">
+                  <a class="grey-text text-darken-4 center-align">Durante: </a>
+                </div>
+                <div class="col s4 card">
+                  <select id="selectDayMonth">
+                    <option value="indefinidamente" selected="">Indefinidamente</option>
+                    <option value="dias">Dias</option>
+                    <option value="meses">Meses</option>
+                  </select>
+                </div>
+                <div class="col s2 card">
+                  <input id="timeDayMonth" type="number" name="timeDayMonth" min="1">
+                </div>
+              </div>
+            </div>
+            <div class="row card">
+              <div class="input-field col s12">
+                <input id="timeHourMinute" type="text" class="timepicker">
+                <label for="timeHourMinute">Escolha a hora que toma os comprimidos.</label>
+              </div>
+            </div>
+            <div class="row card">
+              <div class="input-field col s12">
+                <div class="col s4">
+                  <a class="grey-text text-darken-4 center-align">Quem vai usar a caixa: </a>
+                </div>
+                <div class="col s2">
+                  <label>
+                    <input class="dono" name="group1" type="radio" checked value="João" />
+                    <span>João</span>
+                  </label>
+                </div>
+                <div class="col s2">
+                  <label>
+                    <input class="dono" name="group1" type="radio" value="Outro"/>
+                    <span>Outro</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row card">
+              <div class="input-field col s12">
+                <div class="col s4">
+                  <a class="grey-text text-darken-4 center-align">Adicionar notificação?: </a>
+                </div>
+                <div class="col s2">
+                  <label>
+                    <input name="group2" type="radio" checked />
+                    <span>Sim</span>
+                  </label>
+                </div>
+                <div class="col s2">
+                  <label>
+                    <input name="group2" type="radio" />
+                    <span>Não</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <a class="modal-close btn waves-effect grey-text text-darken-4 waves-light" onclick="addBox()">Concluido</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/caixas.js"></script>
+    <script>
+              $(document).ready(function () {
+                $('.tabs').tabs();
+                $('.dropdown-trigger').dropdown({
+                  alignment: 'right',
+                  constrainWidth: false,
+                  coverTrigger: false
+                });
+                $('.modal').modal();
+                $('select').formSelect();
+                $('.timepicker').timepicker({twelveHour: false});
+              });
+    </script>
+  </body>
+</html>

@@ -30,7 +30,7 @@ function addBox(){
   
   var content = '<div class="row"><div class="col s5 left-align"><h4>';
   content += boxName.value + '</h4></div><div class="col s5 right-align"><h5>';
-  for (var i = 0; i < pillNames.length; i++){
+  for (var i = 0; i < dono.length; i++){
     if(dono[i].checked){
       content += dono[i].value;
     }

@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
+    <title>Index</title>
+
+
+  </head>
+  <body>
+    <div class="row container">
+      <div id="calendar" class="card-panel large">
+        <div id="month" class="row valign-wrapper">
+          <div class="col s3">
+            <a  href="#!" class="btn-floating btn waves-effect grey right prev" onclick="prevMonth()">
+              <i class="material-icons">chevron_left</i>
+            </a>
+          </div>
+          <div class="col s6 center-align">
+            <span id="month_str" class="flow-text"></span>
+
+          </div>
+          <div class="col s3">
+            <a href="#!" class="btn-floating btn waves-effect grey left next" onclick="nextMonth()">
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+        <div id="weekdays" class="row center-align">
+          <table class="centered">
+            <thead>
+              <tr>
+                <th>Domingo</th>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+                <th>Sábado</th>
+              </tr>
+            </thead>
+            <tbody id="days">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    
+    <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                renderDate();
+              });
+              $(document).ready(function () {
+                $('.tabs').tabs();
+                $('.dropdown-trigger').dropdown({
+                  alignment: 'right',
+                  constrainWidth: false,
+                  coverTrigger: false
+                });
+                $('.modal').modal();
+                $('select').formSelect();
+                $('.timepicker').timepicker({twelveHour: false});
+              });
+    </script>
+  </body>
+</html>
