@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+  <pill>
+    <name>Atarax</name>
+    <solves>Alergias</solves>
+    <num>10</num>
+  </pill>
+  <pill>
+    <name>Ibuprofen</name>
+    <solves>Dores</solves>
+    <num>5</num>
+  </pill>
+  <pill>
+    <name>Kompensan</name>
+    <solves>Azia</solves>
+    <num>20</num>
+  </pill>
+  <pill>
+    <name>Nasomet</name>
+    <solves>Alergias</solves>
+    <num>3</num>
+  </pill>
+  <pill>
+    <name>Omeprazol</name>
+    <solves>Dores</solves>
+    <num>50</num>
+  </pill>
+  <pill>
+    <name>Telfast</name>
+    <solves>Alergias</solves>
+    <num>39</num>
+  </pill>
+  <pill>
+    <name>Xanax</name>
+    <solves>Ansiedade</solves>
+    <num>2</num>
+  </pill>
+  <pill>
+    <name>Zyrtec</name>
+    <solves>Alergias</solves>
+    <num>23</num>
+  </pill>
+</root>

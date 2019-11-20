@@ -42,7 +42,11 @@ function addBox(){
   for (var i = 0; i < pillNames.length; i++){
     content += '<div class="col s3"><div class="card"><span class="card-title">';
     content += pillNames[i].value + '</span><div class="card-action">';
-    content += '<button class="btn waves-effect grey-text text-darken-4">';
+    content += '<button id="' + pillNames[i].value + ' ' + numPills[i].value;
+    content += '" class="pillsInBox btn waves-effect grey-text text-darken-4"';
+    content += ' value="' + pillNames[i].value + ' ' + numPills[i].value;
+    var pillName = "'" + pillNames[i].value + "'";
+    content += '" onclick="boxTakePill(' + pillName + ', ' + numPills[i].value + ')">';
     content += numPills[i].value + '</button></div></div></div>';
   }
   content += '<div class="col s3"><a href="#!" class="waves-effect grey-text text-darken-4">';

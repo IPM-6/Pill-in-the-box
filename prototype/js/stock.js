@@ -1,17 +1,8 @@
-var comprimidos = [["Atarax", "Alergias", 10],
-                  ["Ibuprofen", "Dores", 5],
-                  ["Kompensan", "Azia", 20],
-                  ["Nasomet", "Alergias", 3],
-                  ["Omeprazol", "Dores", 50],
-                  ["Telfast", "Alergias", 39],
-                  ["Xanax", "Ansiedade", 2],
-                  ["Zyrtec", "Alergias", 23]
-                  ];
-                 
 function showMedicine(){
-  var ifrm = document.getElementById('stockIFrame');
-  var doc = ifrm.contentDocument? ifrm.contentDocument: ifrm.contentWindow.document;
-  
+  //var ifrm = document.getElementById('stockIFrame');
+  //ifrm.open();
+  //ifrm.write('fuck');
+  //ifrm.close();
   
   var endButton = '<div id="addToStockButton" class="col s12 center-align"><br>';
   endButton += '<a class="btn-floating btn-medium waves-effect waves-light red modal-trigger" href="#stockForm1">';
@@ -33,7 +24,21 @@ function showMedicine(){
     }
   }
   var result = content + endButton;
-  console.log(result);
-  console.log(doc.getElementById('showMedicine'));
-  doc.getElementById('showMedicine').innerHTML = result;
+  
+  document.getElementById('showMedicine').innerHTML = result;
+}
+
+function refreshIframe() {
+    var ifr = document.getElementById('stockIFrame');
+    ifr.src = ifr.src;
+    console.log(comprimidos);
+}
+
+function boxTakePill(pillName, numPills){
+  for(var i = 0; i < comprimidos.length; i++){
+    if(comprimidos[i][0] == pillName)
+      comprimidos[i][2] -= numPills;
+  }
+  document.getElementById(pillName + ' ' + numPills).classList.add("disabled");
+  console.log(comprimidos);
 }
