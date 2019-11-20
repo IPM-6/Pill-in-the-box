@@ -40,7 +40,7 @@
               </table>
             </div>
             <div class="col s2">
-              <a class="btn-floating modal-trigger" href="#modal4" onclick="checkUsers()">
+              <a class="btn-floating modal-trigger" href="#modal4">
                 <i class="material-icons">add</i>
               </a>
             </div>
@@ -195,12 +195,6 @@
                       <span>João</span>
                     </label>
                   </div>
-                  <div class="col s3">
-                    <label>
-                      <input class="dono" name="group1" type="radio" value="Outro"/>
-                      <span>Outro</span>
-                    </label>
-                  </div>
                 </div>
               </div>
             </div>
@@ -232,7 +226,7 @@
           <form class="col s12">
             <div class="row card">
               <div class="input-field col s12">
-                <input id="dononame" type="text" class="validate" maxlength="8">
+                <input id="dononame" type="text" class="validate" minlength="1" maxlength="8">
                 <label for="dononame">Nome do Utilizador</label>
                 <span class="helper-text" data-error="Errado" data-success="Certo"></span>
               </div>

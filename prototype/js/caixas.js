@@ -51,7 +51,10 @@ function addBox(){
   content += '<i class="material-icons medium">edit</i></a></div><div class="row">';
   content += '<button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>';
   content += '</div><div class="row"><div class="col s6"><span>' + timeHourMinute.value;
-  content += '</span></div><div class="col s6"><span>' + timeDayMonth.value + ' ' + selectDayMonth.value;
+  if(selectDayMonth.value != "indefinidamente")
+    content += '</span></div><div class="col s6"><span>' + timeDayMonth.value + ' ' + selectDayMonth.value;
+  else
+    content += '</span></div><div class="col s6"><span>' + selectDayMonth.value;
   content += '</span></div></div></div></div><div class="divider"> </div>';
   
   document.getElementById('caixa').innerHTML += content;
@@ -88,26 +91,29 @@ function addPill(){
 function newDono(){
   var newDono = document.getElementById('dononame').value
   var content = document.getElementById('donos').innerHTML;
-  console.log(content);
   if(user%3 == 0){
-    console.log("if");
     content += '<tr>';
   }else{
-    console.log("else");
     content = content.slice(0, -5);
   }
   user += 1;
-  console.log(content);
   content += '<td><label>';
   content += '<input id="' + newDono + '" class="donosUser" type="checkbox" checked="checked" value="'
   content += newDono + '"/><span>' + newDono + '</span></label></td></tr>';
   document.getElementById('donos').innerHTML = content;
   document.getElementById('dononame').value = "";
+  checkUsers();
 }
 
 function checkUsers(){
   var allUsers = document.getElementsByClassName("donosUser");
+  var content = "";
+  console.log(allUsers);
   for(var i = 0; i < allUsers.length; i++){
-    
+    console.log(allUsers[i].value);
+    content += '<div class="col s3"><label>';
+    content += '<input class="dono" name="group1" type="radio" checked value="' + allUsers[i].value + '" />';
+    content += '<span>' + allUsers[i].value + '</span></label></div>';
   }
+  document.getElementById('possibleUsers').innerHTML = content;
 }
