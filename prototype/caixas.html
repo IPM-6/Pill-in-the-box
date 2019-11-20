@@ -28,70 +28,19 @@
           <div class="row valign-wrapper">
             <div class="col s10" style="height:110px; overflow:auto;">
               <table class="striped">
-                <tr>
-                  <td>
-                    <label>
-                      <input type="checkbox"/>
-                      <span>Person</span>
-                    </label>
-                  </td>
-                  <td>
-                    <label>
-                      <input type="checkbox"/>
-                      <span>Person</span>
-                    </label>
-                  </td>
-                  <td>
-                    <label>
-                      <input type="checkbox"/>
-                      <span>Person</span>
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>
-                      <input type="checkbox"/>
-                      <span>Person</span>
-                    </label>
-                  </td>
-                  <td>
-                    <label>
-                      <input type="checkbox"/>
-                      <span>Person</span>
-                    </label>
-                  </td>
-                  <td>
-                    <label>
-                      <input type="checkbox"/>
-                      <span>Person</span>
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>
-                      <input type="checkbox"/>
-                      <span>Person</span>
-                    </label>
-                  </td>
-                  <td>
-                    <label>
-                      <input type="checkbox"/>
-                      <span>Person</span>
-                    </label>
-                  </td>
-                  <td>
-                    <label>
-                      <input type="checkbox"/>
-                      <span>Person</span>
-                    </label>
-                  </td>
-                </tr>
+                <tbody id="donos">
+                  <tr>
+                    <td>
+                      <label>
+                        <input id="João" class="donosUser" type="checkbox" checked="checked" value="João"/>
+                        <span>João</span>
+                      </label>
+                    </td>
+                  </tr></tbody>
               </table>
             </div>
             <div class="col s2">
-              <a class="btn-floating modal-trigger" href="#modal3">
+              <a class="btn-floating modal-trigger" href="#modal4" onclick="checkUsers()">
                 <i class="material-icons">add</i>
               </a>
             </div>
@@ -239,17 +188,19 @@
                 <div class="col s4">
                   <a class="grey-text text-darken-4 center-align">Quem vai usar a caixa: </a>
                 </div>
-                <div class="col s2">
-                  <label>
-                    <input class="dono" name="group1" type="radio" checked value="João" />
-                    <span>João</span>
-                  </label>
-                </div>
-                <div class="col s2">
-                  <label>
-                    <input class="dono" name="group1" type="radio" value="Outro"/>
-                    <span>Outro</span>
-                  </label>
+                <div id="possibleUsers" class="col s8">
+                  <div class="col s3">
+                    <label>
+                      <input class="dono" name="group1" type="radio" checked value="João" />
+                      <span>João</span>
+                    </label>
+                  </div>
+                  <div class="col s3">
+                    <label>
+                      <input class="dono" name="group1" type="radio" value="Outro"/>
+                      <span>Outro</span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -273,6 +224,20 @@
               </div>
             </div>
             <a class="modal-close btn waves-effect grey-text text-darken-4 waves-light" onclick="addBox()">Concluido</a>
+          </form>
+        </div>
+      </div>
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <form class="col s12">
+            <div class="row card">
+              <div class="input-field col s12">
+                <input id="dononame" type="text" class="validate" maxlength="8">
+                <label for="dononame">Nome do Utilizador</label>
+                <span class="helper-text" data-error="Errado" data-success="Certo"></span>
+              </div>
+            </div>
+            <a class="modal-close btn waves-effect grey-text text-darken-4 waves-light" onclick="newDono()">Concluido</a>
           </form>
         </div>
       </div>

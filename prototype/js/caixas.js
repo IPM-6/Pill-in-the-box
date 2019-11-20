@@ -1,3 +1,5 @@
+var user = 1;
+
 function selectAll(){
   var x = document.getElementsByClassName("person");
   for(var i = 0; i < x.length; i++){
@@ -80,4 +82,32 @@ function newPill(){
 
 function addPill(){
   
+}
+
+
+function newDono(){
+  var newDono = document.getElementById('dononame').value
+  var content = document.getElementById('donos').innerHTML;
+  console.log(content);
+  if(user%3 == 0){
+    console.log("if");
+    content += '<tr>';
+  }else{
+    console.log("else");
+    content = content.slice(0, -5);
+  }
+  user += 1;
+  console.log(content);
+  content += '<td><label>';
+  content += '<input id="' + newDono + '" class="donosUser" type="checkbox" checked="checked" value="'
+  content += newDono + '"/><span>' + newDono + '</span></label></td></tr>';
+  document.getElementById('donos').innerHTML = content;
+  document.getElementById('dononame').value = "";
+}
+
+function checkUsers(){
+  var allUsers = document.getElementsByClassName("donosUser");
+  for(var i = 0; i < allUsers.length; i++){
+    
+  }
 }
