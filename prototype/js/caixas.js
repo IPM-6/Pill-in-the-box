@@ -1,14 +1,14 @@
 var user = 1;
 
 function selectAll(){
-  var x = document.getElementsByClassName("person");
+  var x = document.getElementsByClassName("donosUser");
   for(var i = 0; i < x.length; i++){
     x[i].checked = "checked";
   }
 }
 
 function deselectAll(){
-  var x = document.getElementsByClassName("person");
+  var x = document.getElementsByClassName("donosUser");
   for(var i = 0; i < x.length; i++){
     x[i].checked = "";
   }
@@ -112,7 +112,10 @@ function checkUsers(){
   for(var i = 0; i < allUsers.length; i++){
     console.log(allUsers[i].value);
     content += '<div class="col s3"><label>';
-    content += '<input class="dono" name="group1" type="radio" checked value="' + allUsers[i].value + '" />';
+    if(i == 0)
+      content += '<input class="dono" name="group1" type="radio" checked value="' + allUsers[i].value + '" />';
+    else
+      content += '<input class="dono" name="group1" type="radio" value="' + allUsers[i].value + '" />';
     content += '<span>' + allUsers[i].value + '</span></label></div>';
   }
   document.getElementById('possibleUsers').innerHTML = content;
