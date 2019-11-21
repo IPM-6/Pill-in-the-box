@@ -33,6 +33,19 @@ function getData(){
 
 
 function showMedicine(){
+  
+  var xmlhttp = {};
+  var xmlDoc = {};
+
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  }
+  xmlhttp.open("GET", "data.xml", false);
+  xmlhttp.send();
+  xmlDoc = xmlhttp.responseXML;
+  
+  xmlDoc.getElementsByTagName("num")[0].childNodes[0].nodeValue = 7;
+  xmlDoc.save("data.xml");
 
   var comprimidos = getData();
   
@@ -68,10 +81,12 @@ function refreshIframe() {
 }
 
 function boxTakePill(pillName, numPills){
+  var comprimidos = getData();
   for(var i = 0; i < comprimidos.length; i++){
     if(comprimidos[i][0] == pillName)
       comprimidos[i][2] -= numPills;
   }
   document.getElementById(pillName + ' ' + numPills).classList.add("disabled");
   console.log(comprimidos);
+  
 }
