@@ -1,9 +1,29 @@
+var getXMLFile = function(path, callback){
+  var request = new XMLHttpRequest();
+  request.open("GET", path);
+  request.setRequestHeader("Content-Type", "text/xml");
+  request.onreadystatechange = function(){
+    if(request.readyState === 4 && request.status === 200){
+      callback(request.responseXML);
+    }
+  };
+  request.send();
+};
+
+function getData(){
+  getXMLFile("data.xml", function(xml){
+    console.log(xml);
+  });
+}
+
+
+
 function showMedicine(){
   //var ifrm = document.getElementById('stockIFrame');
   //ifrm.open();
   //ifrm.write('fuck');
   //ifrm.close();
-  
+  /*
   var endButton = '<div id="addToStockButton" class="col s12 center-align"><br>';
   endButton += '<a class="btn-floating btn-medium waves-effect waves-light red modal-trigger" href="#stockForm1">';
   endButton += '<i class="material-icons">add</i></a></div>';
@@ -26,6 +46,7 @@ function showMedicine(){
   var result = content + endButton;
   
   document.getElementById('showMedicine').innerHTML = result;
+  */
 }
 
 function refreshIframe() {
