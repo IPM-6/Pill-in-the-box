@@ -45,7 +45,6 @@ function showMedicine(){
   xmlDoc = xmlhttp.responseXML;
   
   xmlDoc.getElementsByTagName("num")[0].childNodes[0].nodeValue = 7;
-  xmlDoc.save("data.xml");
 
   var comprimidos = getData();
   
