@@ -24,7 +24,10 @@ function showMedicine(){
   //ifrm.open();
   //ifrm.write('fuck');
   //ifrm.close();
-  var xml = getData();
+  var xml = getXMLFile("data.xml", function(xml){
+    console.log(xml);
+    return xml;
+  });
   console.log(xml);
   
   var parser = new DOMParser();
