@@ -11,8 +11,9 @@ var getXMLFile = function(path, callback){
 };
 
 function getData(){
-  getXMLFile("data.xml", function(xml){
-    console.log(xml);
+  return getXMLFile("data.xml", function(xml){
+    //console.log(xml);
+    return xml;
   });
 }
 
@@ -23,10 +24,23 @@ function showMedicine(){
   //ifrm.open();
   //ifrm.write('fuck');
   //ifrm.close();
-  /*
+  var xml = getData();
+  console.log(xml);
+  
+  var parser = new DOMParser();
+  var xmlDoc = parser.parseFromString(xml, "text/xml");
+  console.log(xmlDoc);
+  
+  var pills = xmlDoc.getElementsByTagName("pill");
+  
   var endButton = '<div id="addToStockButton" class="col s12 center-align"><br>';
   endButton += '<a class="btn-floating btn-medium waves-effect waves-light red modal-trigger" href="#stockForm1">';
   endButton += '<i class="material-icons">add</i></a></div>';
+  
+  var comprimidos = [];
+  for(var i = 0; i < pills.lenght; i++){
+    
+  }
   
   var content = "";
   for(var i = 0; i < comprimidos.length; i++){
@@ -46,7 +60,7 @@ function showMedicine(){
   var result = content + endButton;
   
   document.getElementById('showMedicine').innerHTML = result;
-  */
+  
 }
 
 function refreshIframe() {
