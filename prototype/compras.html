@@ -88,6 +88,12 @@
                   </label>
                 </p>
               </form>
+              <div class="input-field col s3">
+                <input placeholder="Sintoma" id="symptomShop" type="text">
+                <label for="symptomShop">Sintoma que trata:
+                  <span class="red-text text-darken-2">*</span>
+                </label>
+              </div>
               <!--<button class="btn waves-effect waves-light" type="submit" name="action">Concluído
                   <i class="material-icons right">send</i>
               </button>-->
@@ -144,13 +150,12 @@
       function validateShopForm1() {
         var pillName = document.getElementById("pillNameShop").value;
         var pillAmount = document.getElementById("pillAmountShop").value;
-        console.log("ParseInt: " + parseInt(pillAmount));
-        console.log("ParseFloat: " + parseFloat(pillAmount));
+        var pillSymptom = document.getElementById("symptomShop").value;
         var medicReceipt = document.getElementById("receiptShop").checked;
         console.log("Pill Name: " + pillName);
         console.log("Pill Amount: " + pillAmount);
         console.log("Receipt: " + medicReceipt);
-        if (pillName == "" || pillAmount == "" || medicReceipt == null) {
+        if (pillName == "" || pillAmount == "" || medicReceipt == null || pillSymptom == "") {
           console.log("Gonna alert!");
           alert("Erro: informação necessária não preenchida.");
         } else if (!Number.isInteger(parseFloat(pillAmount))) {
@@ -164,7 +169,7 @@
             alert("Erro: preço dos comprimidos deve ser um número!");
           } else {
             console.log("addingNewPillTO SHopping list!")
-            this.addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt);
+            this.addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt, pillSymptom);
           }
         }
         this.cleanForm1();
@@ -183,12 +188,30 @@
         } else {
           //add pills bought to stock
           var totalPillsBought = this.currentPillPerBox * amountBought;
+          this.addPillXML(totalPillsBought);
           console.log("Total pills bought: " + totalPillsBought);
           this.deleteShopPill(this.currentPillName);
           console.log("Deleted successfully pill: " + this.currentPillName);
           console.log("Deleted successfully pill amount: " + this.currentPillPerBox);
         }
         this.cleanForm2();
+      }
+
+      function addPillXML(totalPills) {
+        var xmlhttp = {};
+        var xmlDoc = {};
+
+        if (window.XMLHttpRequest) {
+          xmlhttp = new XMLHttpRequest();
+        }
+        xmlhttp.open("GET", "data.xml", false);
+        xmlhttp.send();
+        xmlDoc = xmlhttp.responseXML;
+        console.log("HELOOOOOOOO");
+        console.log(xmlDoc);
+
+
+        
       }
 
       function cleanForm1() {
@@ -204,8 +227,9 @@
 
       var currentPillName = "";
       var currentPillPerBox = undefined;
+      var currentSymptom = "";
 
-      function addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt) {
+      function addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt, pillSymptom) {
         var shoppingList = document.getElementById("pillsToShop");
         console.log(shoppingList);
         var pillRow = document.createElement("tr");
@@ -248,15 +272,17 @@
         console.log("Button added with event:");
         console.log(button);
         button.addEventListener('click', function(){
-          setParameters(pillName, pillAmount);
+          setParameters(pillName, pillAmount, pillSymptom);
         });
       }
       
-      function setParameters(pillName, pillPerBox) {
+      function setParameters(pillName, pillPerBox, pillSymptom) {
         console.log("Changed pill name from, to: " + this.currentPillName + ", " + pillName);
         console.log("Changed pill amount from, to: " + this.currentPillPerBox + ", " + pillPerBox);
+        console.log("Changed pill symptom from, to: " + this.currentSymptom + ", " + pillSymptom);
         this.currentPillName = pillName;
         this.currentPillPerBox = pillPerBox;
+        this.currentSymptom = pillSymptom;
       }
 
       function deleteShopPill(pillName) {
