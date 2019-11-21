@@ -24,15 +24,16 @@ function showMedicine(){
   //ifrm.open();
   //ifrm.write('fuck');
   //ifrm.close();
-  var xml = getXMLFile("data.xml", function(xml){
+  var xmlDoc = getXMLFile("data.xml", function(xml){
     console.log(xml);
-    return xml;
+    var parser = new DOMParser();
+    var xmlDoc = parser.parseFromString(xml, "text/xml");
+    console.log(xmlDoc);
+    return xmlDoc;
   });
-  console.log(xml);
-  
-  var parser = new DOMParser();
-  var xmlDoc = parser.parseFromString(xml, "text/xml");
   console.log(xmlDoc);
+  
+  
   
   var pills = xmlDoc.getElementsByTagName("pill");
   
