@@ -39,7 +39,11 @@ function showMedicine(){
   
   var comprimidos = [];
   for(var i = 0; i < pills.lenght; i++){
-    
+    var newPill = [];
+    newPill.push(pills[i].childNodes[0].nodeValue);
+    newPill.push(pills[i].childNodes[1].nodeValue);
+    newPill.push(pills[i].childNodes[2].nodeValue);
+    comprimidos.push(newPill);
   }
   
   var content = "";
