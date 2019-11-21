@@ -66,7 +66,7 @@ function showMedicine(){
 function refreshIframe() {
     var ifr = document.getElementById('stockIFrame');
     ifr.src = ifr.src;
-    console.log(comprimidos);
+    //console.log(comprimidos);
 }
 
 function boxTakePill(pillName, numPills){
