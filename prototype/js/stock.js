@@ -12,7 +12,7 @@ var getXMLFile = function(path, callback){
 
 function getData(){
   return getXMLFile("data.xml", function(xml){
-    //console.log(xml);
+    console.log(xml);
     return xml;
   });
 }
