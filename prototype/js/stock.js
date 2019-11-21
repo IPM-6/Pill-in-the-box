@@ -1,60 +1,39 @@
-function getData(){
-  var xmlhttp = {};
-  var xmlDoc = {};
-
-  if (window.XMLHttpRequest) {
-    xmlhttp = new XMLHttpRequest();
-  }
-  xmlhttp.open("GET", "data.xml", false);
-  xmlhttp.send();
-  xmlDoc = xmlhttp.responseXML;
-
-  console.log(xmlDoc);
-  
-  var names = xmlDoc.getElementsByTagName("name");
-  var solves = xmlDoc.getElementsByTagName("solves");
-  var num = xmlDoc.getElementsByTagName("num");
-
-  var comprimidos = [];
-  for(var i = 0; i < names.length; i++){
-    //console.log("In for: " + names[i].childNodes[0].nodeValue);
-    var newPill = [];
-    newPill.push(names[i].childNodes[0].nodeValue);
-    newPill.push(solves[i].childNodes[0].nodeValue);
-    newPill.push(num[i].childNodes[0].nodeValue);
-    //console.log(newPill);
-    
-    comprimidos.push(newPill);
-    //console.log(comprimidos);
-  }
-  return comprimidos;
-}
+var comprimidos = [["Atarax","Alergias", 10],
+                  ["Ibuprofen", "Dores", 5],
+                  ["Kompensan", "Azia", 20],
+                  ["Nasomet", "Alergias", 3],
+                  ["Omeprazol", "Dores", 50],
+                  ["Telfast", "Alergias", 39],
+                  ["Xanax", "Ansiedade", 2],
+                  ["Zyrtec", "Alergias", 23]];
 
 
 
 function showMedicine(){
   
-  /*var xmlhttp = {};
-  var xmlDoc = {};
-
-  if (window.XMLHttpRequest) {
-    xmlhttp = new XMLHttpRequest();
-  }
-  xmlhttp.open("GET", "data.xml", false);
-  xmlhttp.send();
-  xmlDoc = xmlhttp.responseXML;
-  
-  xmlDoc.getElementsByTagName("num")[0].childNodes[0].nodeValue = 7;*/
-
-  var comprimidos = getData();
   
   var endButton = '<div id="addToStockButton" class="col s12 center-align"><br>';
   endButton += '<a class="btn-floating btn-medium waves-effect waves-light red modal-trigger" href="#stockForm1">';
   endButton += '<i class="material-icons">add</i></a></div>';
   
+  var solves = [];
+  
   var content = "";
   for(var i = 0; i < comprimidos.length; i++){
     var letter = comprimidos[i][0].charAt(0).toUpperCase();
+    
+    var exist = false;
+    if(i == 0)
+      solves.push(comprimidos[i][1]);
+    else{
+      for (var j = 0; j < solves.length; j++)
+        if(comprimidos[i][1] == solves[j]){
+          exist = true;
+        }
+      if(!exist)
+        solves.push(comprimidos[i][1]);
+    }
+    
     content += '<div id="' + letter + '" class="letter col s6">';
     content += '<div class="card"><h4>' + letter + '</h4>';
     for(var j = i; j < comprimidos.length; j++){
@@ -71,6 +50,15 @@ function showMedicine(){
   
   document.getElementById('showMedicine').innerHTML = result;
   
+  
+  var result2 = "";
+  for(var i = 0; i < solves.length; i++){
+    result2 += '<label>';
+    result2 += '<input id="' + solves[i] + '" class="solutions" type="checkbox" class="filled-in" checked="checked" />';
+    result2 += '<span >' + solves[i] + '</span></label>';
+  }
+  
+  document.getElementById('solves').innerHTML = result2;
 }
 
 function refreshIframe() {
@@ -80,7 +68,6 @@ function refreshIframe() {
 }
 
 function boxTakePill(pillName, numPills){
-  var comprimidos = getData();
   for(var i = 0; i < comprimidos.length; i++){
     if(comprimidos[i][0] == pillName)
       comprimidos[i][2] -= numPills;
