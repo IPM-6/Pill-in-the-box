@@ -24,30 +24,42 @@ function showMedicine(){
   //ifrm.open();
   //ifrm.write('fuck');
   //ifrm.close();
-  var xmlDoc = getXMLFile("data.xml", function(xml){
+  /*var xmlDoc = getXMLFile("data.xml", function(xml){
     console.log(xml);
     var parser = new DOMParser();
     var xmlDoc = parser.parseFromString(xml, "text/xml");
     console.log(xmlDoc);
     return xmlDoc;
-  });
+  });*/
+  
+  var xml = '<?xml version="1.0" encoding="UTF-8"?><root><pill><name>Atarax</name><solves>Alergias</solves><num>10</num></pill><pill><name>Ibuprofen</name><solves>Dores</solves><num>5</num></pill><pill><name>Kompensan</name><solves>Azia</solves><num>20</num></pill><pill><name>Nasomet</name><solves>Alergias</solves><num>3</num></pill><pill><name>Omeprazol</name><solves>Dores</solves><num>50</num></pill><pill><name>Telfast</name><solves>Alergias</solves><num>39</num></pill><pill><name>Xanax</name><solves>Ansiedade</solves><num>2</num></pill><pill><name>Zyrtec</name><solves>Alergias</solves><num>23</num></pill></root>';
+  console.log(xml);
+  var parser = new DOMParser();
+  var xmlDoc = parser.parseFromString(xml, "text/xml");
   console.log(xmlDoc);
   
   
   
-  var pills = xmlDoc.getElementsByTagName("pill");
+  var names = xmlDoc.getElementsByTagName("name");
+  var solves = xmlDoc.getElementsByTagName("solves");
+  var num = xmlDoc.getElementsByTagName("num");
+  console.log(names);
   
   var endButton = '<div id="addToStockButton" class="col s12 center-align"><br>';
   endButton += '<a class="btn-floating btn-medium waves-effect waves-light red modal-trigger" href="#stockForm1">';
   endButton += '<i class="material-icons">add</i></a></div>';
   
   var comprimidos = [];
-  for(var i = 0; i < pills.lenght; i++){
+  for(var i = 0; i < names.length; i++){
+    console.log("In for: " + names[i].childNodes[0].nodeValue);
     var newPill = [];
-    newPill.push(pills[i].childNodes[0].nodeValue);
-    newPill.push(pills[i].childNodes[1].nodeValue);
-    newPill.push(pills[i].childNodes[2].nodeValue);
+    newPill.push(names[i].childNodes[0].nodeValue);
+    newPill.push(solves[i].childNodes[0].nodeValue);
+    newPill.push(num[i].childNodes[0].nodeValue);
+    console.log(newPill);
+    
     comprimidos.push(newPill);
+    console.log(comprimidos);
   }
   
   var content = "";
