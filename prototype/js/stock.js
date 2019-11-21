@@ -34,7 +34,7 @@ function getData(){
 
 function showMedicine(){
   
-  var xmlhttp = {};
+  /*var xmlhttp = {};
   var xmlDoc = {};
 
   if (window.XMLHttpRequest) {
@@ -44,7 +44,7 @@ function showMedicine(){
   xmlhttp.send();
   xmlDoc = xmlhttp.responseXML;
   
-  xmlDoc.getElementsByTagName("num")[0].childNodes[0].nodeValue = 7;
+  xmlDoc.getElementsByTagName("num")[0].childNodes[0].nodeValue = 7;*/
 
   var comprimidos = getData();
   
