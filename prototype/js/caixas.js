@@ -77,17 +77,29 @@ function editBox(id){
   
   var caixa = document.getElementById(id);
   
-  console.log(caixa.childNodes[1].childNodes[1].childNodes[2].childNodes[1].childNodes[0].childNodes[0].nodeValue);
+  console.log();
   
   document.getElementById("boxname").value = caixa.childNodes[0].childNodes[0].childNodes[0].childNodes[0].nodeValue;
+  document.getElementById("boxname").classList.add("active");
+  //console.log(document.getElementById("boxname"));
+  
   var seperate = caixa.childNodes[1].childNodes[1].childNodes[2].childNodes[1].childNodes[0].childNodes[0].nodeValue.split(" ");
-  if(seperate > 1)
-    document.getElementById("timeDayMonth").value = seperate[1];
-  document.getElementById("selectDayMonth").value = seperate[0];
+  if(seperate.length > 1){
+    document.getElementById("timeDayMonth").value = seperate[0];
+    if(seperate[1] == "dias"){
+      console.log("dias");
+      document.getElementById("selectDayMonth").selectedIndex = "1";
+      console.log(document.getElementById("selectDayMonth").selectedIndex);
+    }
+    else
+      document.getElementById("selectDayMonth").selectedIndex = 2;
+  }
+  else
+    document.getElementById("selectDayMonth").selectedIndex = 0;
   
   
   document.getElementById("timeHourMinute").value = caixa.childNodes[1].childNodes[1].childNodes[2].childNodes[0].childNodes[0].childNodes[0].nodeValue;
-  
+  document.getElementById("timeHourMinute").classList.add("active");
   
 }
 
@@ -119,12 +131,14 @@ function newPill(){
 
 function addPill(){
   document.getElementById("boxname").value = "";
+  document.getElementById("timeHourMinute").value = "";
+  document.getElementById("timeDayMonth").value = "";
   document.getElementById("addedPills").innerHTML = '<div class="row card"><div class="input-field col s12"><input id="pillname1" type="text" class="validate pillnames"><label for="pillname1">Nome do comprimido</label><span class="helper-text" data-error="Errado" data-success="Certo"></span></div><div class="col s12"><div class="col s5"><a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a></div><div class="col s2 card"><input id="numPill1" class="numPills" type="number" name="quantity" min="1"></div></div></div>';
 }
 
 
 function newDono(){
-  var newDono = document.getElementById('dononame').value
+  var newDono = document.getElementById('dononame').value;
   var content = document.getElementById('donos').innerHTML;
   if(user%3 == 0){
     content += '<tr>';
