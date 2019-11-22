@@ -30,13 +30,16 @@ function addBox(){
   var dono = document.getElementsByClassName("dono");
   var notificacao = document.getElementsByClassName("notificacao");
   
-  var content = '<div class="row"><div class="col s5 left-align"><h4>';
-  content += boxName.value + '</h4></div><div class="col s5 right-align"><h5>';
+  var trueDono = "";
   for (var i = 0; i < dono.length; i++){
     if(dono[i].checked){
-      content += dono[i].value;
+      trueDono = dono[i].value;
     }
   }
+  var content = '<div id="' + boxName.value + ' ' + trueDono + '" class="' + trueDono + '">';
+  content += '<div class="row"><div class="col s5 left-align"><h4>';
+  content += boxName.value + '</h4></div><div class="col s5 right-align"><h5>';
+  content += trueDono;
   content += '</h5></div><div class="col s2"></div></div><div class="row valign-wrapper">';
   content += '<div class="col s10"><div class="row z-depth-5 center-align">';
   for (var i = 0; i < pillNames.length; i++){
@@ -59,11 +62,9 @@ function addBox(){
     content += '</span></div><div class="col s6"><span>' + timeDayMonth.value + ' ' + selectDayMonth.value;
   else
     content += '</span></div><div class="col s6"><span>' + selectDayMonth.value;
-  content += '</span></div></div></div></div><div class="divider"> </div>';
+  content += '</span></div></div></div></div></div><div class="divider"> </div>';
   
   document.getElementById('caixa').innerHTML += content;
-  
-  document.getElementById("boxname").value = "";
 }
 
 function newPill(){
@@ -88,7 +89,7 @@ function newPill(){
 }
 
 function addPill(){
-  
+  document.getElementById("addedPills").innerHTML = '<div class="row card"><div class="input-field col s12"><input id="pillname1" type="text" class="validate pillnames"><label for="pillname1">Nome do comprimido</label><span class="helper-text" data-error="Errado" data-success="Certo"></span></div><div class="col s12"><div class="col s5"><a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a></div><div class="col s2 card"><input id="numPill1" class="numPills" type="number" name="quantity" min="1"></div></div></div>';
 }
 
 
@@ -123,4 +124,10 @@ function checkUsers(){
     content += '<span>' + allUsers[i].value + '</span></label></div>';
   }
   document.getElementById('possibleUsers').innerHTML = content;
+}
+
+
+
+function verifyUserCheckBox(User){
+  var checkUser = document.getElementById(User).value;
 }
