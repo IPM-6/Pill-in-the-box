@@ -54,10 +54,10 @@ function addBox(){
     content += '" onclick="boxTakePill(' + pillName + ', ' + numPills[i].value + ')">';
     content += numPills[i].value + '</button></div></div></div>';
   }
-  content += '<div class="col s3"><a href="#!" class="waves-effect grey-text text-darken-4">';
-  content += '<i class="material-icons large">add</i></a></div></div></div><div class="col s2 center">';
-  content += '<div class="row"><a class="grey-text text-darken-4" onclick="addPill()">';
-  content += '<i class="material-icons medium">edit</i></a></div><div class="row">';
+  content += '<div class="col s3"><a href="#!" class="waves-effect grey-text text-darken-4" onclick="editBox()">';
+  content += '<i class="material-icons medium">edit</i></a></div></div></div><div class="col s2 center">';
+  content += '<div class="row"><a class="waves-effect grey-text text-darken-4" onclick="deleteBox(' + "'" + boxName.value + ' ' + trueDono + "'" + ')">';
+  content += '<i class="material-icons medium">cancel</i></a></div><div class="row">';
   content += '<button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>';
   content += '</div><div class="row"><div class="col s6"><span>' + timeHourMinute.value;
   if(selectDayMonth.value != "indefinidamente")
@@ -68,6 +68,17 @@ function addBox(){
   
   document.getElementById('caixa').innerHTML += content;
 }
+
+
+function editBox(){
+  console.log("editBox");
+}
+
+function deleteBox(id){
+  console.log("deleteBox");
+  document.getElementById(id).classList.add("hide");
+}
+
 
 function newPill(){
   var id = new Date;
