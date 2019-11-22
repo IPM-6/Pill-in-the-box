@@ -54,7 +54,7 @@ function addBox(){
     content += '" onclick="boxTakePill(' + pillName + ', ' + numPills[i].value + ')">';
     content += numPills[i].value + '</button></div></div></div>';
   }
-  content += '<div class="col s3"><a href="#!" class="waves-effect grey-text text-darken-4" onclick="editBox()">';
+  content += '<div class="col s3"><a href="#modal3" class="modal-trigger waves-effect grey-text text-darken-4" onclick="editBox(' + "'" + boxName.value + ' ' + trueDono + "'" + ')">';
   content += '<i class="material-icons medium">edit</i></a></div></div></div><div class="col s2 center">';
   content += '<div class="row"><a class="waves-effect grey-text text-darken-4" onclick="deleteBox(' + "'" + boxName.value + ' ' + trueDono + "'" + ')">';
   content += '<i class="material-icons medium">cancel</i></a></div><div class="row">';
@@ -70,12 +70,28 @@ function addBox(){
 }
 
 
-function editBox(){
-  console.log("editBox");
+function editBox(id){
+  
+  addPill();
+  deleteBox(id);
+  
+  var caixa = document.getElementById(id);
+  
+  console.log(caixa.childNodes[1].childNodes[1].childNodes[2].childNodes[1].childNodes[0].childNodes[0].nodeValue);
+  
+  document.getElementById("boxname").value = caixa.childNodes[0].childNodes[0].childNodes[0].childNodes[0].nodeValue;
+  var seperate = caixa.childNodes[1].childNodes[1].childNodes[2].childNodes[1].childNodes[0].childNodes[0].nodeValue.split(" ");
+  if(seperate > 1)
+    document.getElementById("timeDayMonth").value = seperate[1];
+  document.getElementById("selectDayMonth").value = seperate[0];
+  
+  
+  document.getElementById("timeHourMinute").value = caixa.childNodes[1].childNodes[1].childNodes[2].childNodes[0].childNodes[0].childNodes[0].nodeValue;
+  
+  
 }
 
 function deleteBox(id){
-  console.log("deleteBox");
   document.getElementById(id).classList.add("hide");
 }
 
