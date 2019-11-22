@@ -87,9 +87,9 @@ function editBox(id){
   if(seperate.length > 1){
     document.getElementById("timeDayMonth").value = seperate[0];
     if(seperate[1] == "dias"){
-      console.log("dias");
-      document.getElementById("selectDayMonth").selectedIndex = "1";
-      console.log(document.getElementById("selectDayMonth").selectedIndex);
+      console.log(document.getElementById('selectDayMonth').getElementsByTagName('option')[1].selected);
+      document.getElementById('selectDayMonth').getElementsByTagName('option')[1].selected = 'selected'
+      console.log(document.getElementById('selectDayMonth').getElementsByTagName('option')[1].selected);
     }
     else
       document.getElementById("selectDayMonth").selectedIndex = 2;
