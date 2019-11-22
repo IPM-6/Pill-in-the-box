@@ -4,6 +4,7 @@ function selectAll(){
   var x = document.getElementsByClassName("donosUser");
   for(var i = 0; i < x.length; i++){
     x[i].checked = "checked";
+    verifyUserCheckBox(x[i].value);
   }
 }
 
@@ -11,6 +12,7 @@ function deselectAll(){
   var x = document.getElementsByClassName("donosUser");
   for(var i = 0; i < x.length; i++){
     x[i].checked = "";
+    verifyUserCheckBox(x[i].value);
   }
 }
 
@@ -89,6 +91,7 @@ function newPill(){
 }
 
 function addPill(){
+  document.getElementById("boxname").value = "";
   document.getElementById("addedPills").innerHTML = '<div class="row card"><div class="input-field col s12"><input id="pillname1" type="text" class="validate pillnames"><label for="pillname1">Nome do comprimido</label><span class="helper-text" data-error="Errado" data-success="Certo"></span></div><div class="col s12"><div class="col s5"><a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a></div><div class="col s2 card"><input id="numPill1" class="numPills" type="number" name="quantity" min="1"></div></div></div>';
 }
 
@@ -104,7 +107,8 @@ function newDono(){
   user += 1;
   content += '<td><label>';
   content += '<input id="' + newDono + '" class="donosUser" type="checkbox" checked="checked" value="'
-  content += newDono + '"/><span>' + newDono + '</span></label></td></tr>';
+  content += newDono + '"  onclick="verifyUserCheckBox(' + "'" + newDono + "'" + ')"/>';
+  content += '<span>' + newDono + '</span></label></td></tr>';
   document.getElementById('donos').innerHTML = content;
   document.getElementById('dononame').value = "";
   checkUsers();
@@ -129,5 +133,18 @@ function checkUsers(){
 
 
 function verifyUserCheckBox(User){
-  var checkUser = document.getElementById(User).value;
+  var checkUser = document.getElementById(User);
+  var boxes = document.getElementsByClassName(User);
+  console.log(checkUser.checked);
+  if(checkUser.checked){
+    for(var i = 0; i < boxes.length; i++){
+      document.getElementsByClassName(User)[i].classList.remove("hide");
+    }
+  }
+  else{
+    for(var i = 0; i < boxes.length; i++){
+      document.getElementsByClassName(User)[i].classList.add("hide");
+    }
+  }
+  
 }
