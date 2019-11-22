@@ -52,7 +52,7 @@ function addPillStock(totalPills) {
   console.log("Adding pill to stock name: " + this.currentPillName);
   console.log("Adding pill to stock symptom: " + this.currentSymptom);
   console.log("Adding pill to stock amount: " + totalPills);
-  addPillToStockShop(this.currentPillName, this.currentSymptom, this.totalPills);
+  addPillToStockShop(this.currentPillName, this.currentSymptom, totalPills);
   console.log("Done Poggers");
 }
 
