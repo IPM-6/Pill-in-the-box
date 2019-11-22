@@ -32,6 +32,8 @@ function showMedicine() {
     }
 
     var letter = comprimidos[i][0].charAt(0).toUpperCase();
+    if (!/^[A-Z]/.test(letter))
+      letter = "Other";
     for (var z = 0; z < usedPills.length; z++) {
       if (i == usedPills[z])
         used = true;
@@ -42,6 +44,8 @@ function showMedicine() {
 
       for (var j = i; j < comprimidos.length; j++) {
         var letter2 = comprimidos[j][0].charAt(0).toUpperCase();
+        if (!/^[A-Z]/.test(letter2))
+          letter2 = "Other";
         var used = false;
 
         if (letter == letter2) {
