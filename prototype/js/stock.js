@@ -41,7 +41,7 @@ function showMedicine(){
       if(letter === letter2){
         content += '<div class="card-action">';
         content += '<a class="waves-effect grey-text text-darken-4">' + comprimidos[j][0] + ':</a>';
-        content += '<a id="zyretecCount" class="grey-text text-darken-4">' + comprimidos[j][2] + '</a></div>';
+        content += '<a id="' + comprimidos[j][0] + 'Count" class="grey-text text-darken-4">' + comprimidos[j][2] + '</a></div>';
       }
       content += '</div></div>';
     }
