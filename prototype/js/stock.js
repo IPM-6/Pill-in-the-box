@@ -161,12 +161,21 @@ function addPillToStock() {
 
 
 
-
 function addPillToStockShop(pillName, sintoma, pillAmount) {
 	console.log("PillName Stock: " + pillName); 
 	console.log("Sintoma Stock: " + sintoma);
 	console.log("PillAmount Stock: " + pillAmount);
-	console.log("PillAmount Stock: " + parseInt(pillAmount)); 
-  comprimidos.push([pillName, sintoma, parseInt(pillAmount)]);
-  showMedicine();
+	console.log("PillAmount Stock: " + parseInt(pillAmount));
+	var found = false;
+	for (var i = 0; i < comprimidos.length; i++) {
+    	if (comprimidos[i][0] == pillName) {
+    		comprimidos[i][2] += parseInt(pillAmount);
+    		found = true;
+    		break;
+    	}
+    }
+    if (!found) {
+  		comprimidos.push([pillName, sintoma, parseInt(pillAmount)]);
+  	}
+  	showMedicine();
 }
