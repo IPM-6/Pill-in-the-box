@@ -506,67 +506,10 @@ and open the template in the editor.
           <div class="col s9">
             <div id="showMedicine" class="row z-depth-5">
 
-              <div id="A" class="letter col s6">
-                <div class="card">
-                  <h4>A</h4>
-                  <div class="card-action">
-                    <a class="waves-effect grey-text text-darken-4">Atarax:</a>
-                    <a id="ataraxCount" class="grey-text text-darken-4">10</a>
-                  </div>
-                  <div class="card-action">
-                    <a class="waves-effect grey-text text-darken-4">Adderall:</a>
-                    <a id="adderallCount" class="grey-text text-darken-4">2</a>
-                  </div>
-                </div>
-              </div>
-              <div id="N" class="letter col s6">
-                <div class="card">
-                  <h4>N</h4>
-                  <div class="card-action">
-                    <a class="waves-effect grey-text text-darken-4">Nasomete:</a>
-                    <a id="nasometeCount" class="grey-text text-darken-4">40</a>
-                  </div>
-                </div>
-              </div>
-              <div id="Z" class="letter col s6">
-                <div class="card">
-                  <h4>Z</h4>
-                  <div class="card-action">
-                    <a class="waves-effect grey-text text-darken-4">Zyretec:</a>
-                    <a id="zyretecCount" class="grey-text text-darken-4">20</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- AQUI -->
-              <div id="addToStockButton" class="col s12 center-align">
-                <br>
-                <a class="btn-floating btn-medium waves-effect waves-light red modal-trigger" href="#stockForm1">
-                  <i class="material-icons">add</i>
-                </a>
-              </div>
-
             </div>
           </div>
           <div id="solves" class="col s3">
-            <label>
-              <input type="checkbox" class="filled-in" checked="checked" />
-              <span > Dores de Cabeça</span>
-            </label>
-            <br/>
-            <label>
-              <input type="checkbox" class="filled-in" checked="checked" />
-              <span >Febre</span>
-            </label>
-            <br/>
-            <label>
-              <input type="checkbox" class="filled-in" checked="checked" />
-              <span >Dores de Costas</span>
-            </label>
-            <label>
-              <input type="checkbox" class="filled-in" checked="checked" />
-              <span >Alergias</span>
-            </label>
+
           </div>
           <!-- AQUI -->
           <div id="stockForm1" class="modal">
@@ -805,20 +748,20 @@ and open the template in the editor.
     <script type="text/javascript" src="js/compras.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                renderDate();
-              });
-              $(document).ready(function () {
-                $('.tabs').tabs();
-                $('.dropdown-trigger').dropdown({
-                  alignment: 'right',
-                  constrainWidth: false,
-                  coverTrigger: false
-                });
-                $('.modal').modal();
-                $('select').formSelect();
-                $('.timepicker').timepicker({twelveHour: false});
-              });
+                  document.addEventListener('DOMContentLoaded', function () {
+                    renderDate();
+                  });
+                  $(document).ready(function () {
+                    $('.tabs').tabs();
+                    $('.dropdown-trigger').dropdown({
+                      alignment: 'right',
+                      constrainWidth: false,
+                      coverTrigger: false
+                    });
+                    $('.modal').modal();
+                    $('select').formSelect();
+                    $('.timepicker').timepicker({twelveHour: false});
+                  });
     </script>
 
     <script>
