@@ -39,7 +39,7 @@ function validateShopForm2() {
   } else {
     //add pills bought to stock
     var totalPillsBought = this.currentPillPerBox * amountBought;
-    this.addPillXML(totalPillsBought);
+    this.addPillStock(totalPillsBought);
     console.log("Total pills bought: " + totalPillsBought);
     this.deleteShopPill(this.currentPillName);
     console.log("Deleted successfully pill: " + this.currentPillName);
@@ -48,21 +48,12 @@ function validateShopForm2() {
   this.cleanForm2();
 }
 
-function addPillXML(totalPills) {
-  var xmlhttp = {};
-  var xmlDoc = {};
-
-  if (window.XMLHttpRequest) {
-    xmlhttp = new XMLHttpRequest();
-  }
-  xmlhttp.open("GET", "data.xml", false);
-  xmlhttp.send();
-  xmlDoc = xmlhttp.responseXML;
-  console.log("HELOOOOOOOO");
-  console.log(xmlDoc);
-
-
-
+function addPillStock(totalPills) {
+  console.log("Adding pill to stock name: " + this.currentPillName);
+  console.log("Adding pill to stock symptom: " + this.currentSymptom);
+  console.log("Adding pill to stock amount: " + totalPills);
+  addPillToStockShop(this.currentPillName, this.currentSymptom, this.totalPills);
+  console.log("Done Poggers");
 }
 
 function cleanForm1() {

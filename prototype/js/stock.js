@@ -158,3 +158,15 @@ function addPillToStock() {
 
   showMedicine();
 }
+
+
+
+
+function addPillToStockShop(pillName, sintoma, pillAmount) {
+	console.log("PillName Stock: " + pillName); 
+	console.log("Sintoma Stock: " + sintoma);
+	console.log("PillAmount Stock: " + pillAmount);
+	console.log("PillAmount Stock: " + parseInt(pillAmount)); 
+  comprimidos.push([pillName, sintoma, parseInt(pillAmount)]);
+  showMedicine();
+}
