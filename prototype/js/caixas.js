@@ -118,12 +118,12 @@ function newPill() {
   var content = '<div class="row card">';
   content += '<div class="input-field col s12">';
   content += '<input id="pillname' + id + '" type="text" class="validate pillnames">';
-  content += '<label for="pillname' + id + '">Nome do comprimido</label>';
+  content += '<label for="pillname' + id + '">Nome do comprimido<span class="red-text text-darken-2">*</span></label>';
   content += '<span class="helper-text" data-error="Errado" data-success="Certo"></span>';
   content += '</div>';
   content += '<div class="col s12">';
   content += '<div class="col s5">';
-  content += '<a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a>';
+  content += '<a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia:<span class="red-text text-darken-2">*</span></a>';
   content += '</div>';
   content += '<div class="col s2 card">';
   content += '<input id="numPill1" class="numPills" type="number" name="quantity" min="1">';
@@ -137,7 +137,7 @@ function addPill() {
   document.getElementById("boxname").value = "";
   document.getElementById("timeHourMinute").value = "";
   document.getElementById("timeDayMonth").value = "";
-  document.getElementById("addedPills").innerHTML = '<div class="row card"><div class="input-field col s12"><input id="pillname1" type="text" class="validate pillnames"><label for="pillname1">Nome do comprimido</label><span class="helper-text" data-error="Errado" data-success="Certo"></span></div><div class="col s12"><div class="col s5"><a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia: </a></div><div class="col s2 card"><input id="numPill1" class="numPills" type="number" name="quantity" min="1"></div></div></div>';
+  document.getElementById("addedPills").innerHTML = '<div class="row card"><div class="input-field col s12"><input id="pillname1" type="text" class="validate pillnames"><label for="pillname1">Nome do comprimido<span class="red-text text-darken-2">*</span></label><span class="helper-text" data-error="Errado" data-success="Certo"></span></div><div class="col s12"><div class="col s5"><a class="grey-text text-darken-4 right-align">Quantidade de comprimidos por dia:<span class="red-text text-darken-2">*</span></a></div><div class="col s2 card"><input id="numPill1" class="numPills" type="number" name="quantity" min="1"></div></div></div>';
 }
 
 
