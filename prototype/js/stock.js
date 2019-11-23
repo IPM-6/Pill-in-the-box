@@ -99,12 +99,20 @@ function refreshIframe() {
 
 function boxTakePill(pillName, numPills) {
   for (var i = 0; i < comprimidos.length; i++) {
-    if (comprimidos[i][0] == pillName)
+    if (comprimidos[i][0].toUpperCase() == pillName.toUpperCase())
       comprimidos[i][2] -= numPills;
   }
   document.getElementById(pillName + ' ' + numPills).classList.add("disabled");
   console.log(comprimidos);
 
+}
+
+function takeAll(){
+  var pills = document.getElementsByClassName("pillsInBox");
+  for(var i = 0; i < pills.length; i++){
+    var values = pills[i].value.split(" ");
+    boxTakePill(values[0], values[1]);
+  }
 }
 
 
@@ -115,7 +123,7 @@ function boxTakePill(pillName, numPills) {
 
 function removePill(pillName) {
   for (var i = 0; i < comprimidos.length; i++) {
-    if (comprimidos[i][0] == pillName) {
+    if (comprimidos[i][0].toUpperCase() == pillName.toUpperCase()) {
       if (comprimidos[i][2] > 0)
         comprimidos[i][2]--;
       document.getElementById(comprimidos[i][0] + 'Count').innerHTML = comprimidos[i][2];
@@ -129,7 +137,7 @@ function removePill(pillName) {
 
 function pillVisibility(solvesName) {
   for (var i = 0; i < comprimidos.length; i++) {
-    if (comprimidos[i][1] == solvesName) {
+    if (comprimidos[i][1].toUpperCase() == solvesName.toUpperCase()) {
       var checked = document.getElementById(solvesName).checked;
       if (checked)
         document.getElementById(comprimidos[i][0] + 'Pill').classList.remove("hide");
@@ -168,7 +176,7 @@ function addPillToStockShop(pillName, sintoma, pillAmount) {
 	console.log("PillAmount Stock: " + parseInt(pillAmount));
 	var found = false;
 	for (var i = 0; i < comprimidos.length; i++) {
-    	if (comprimidos[i][0] == pillName) {
+    	if (comprimidos[i][0].toUpperCase() == pillName.toUpperCase()) {
     		comprimidos[i][2] += parseInt(pillAmount);
     		found = true;
     		break;

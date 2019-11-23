@@ -58,7 +58,7 @@ function addBox() {
   content += '<i class="material-icons medium">edit</i></a></div></div></div><div class="col s2 center">';
   content += '<div class="row"><a class="waves-effect grey-text text-darken-4" onclick="deleteBox(' + "'" + boxName.value + ' ' + trueDono + "'" + ')">';
   content += '<i class="material-icons medium">cancel</i></a></div><div class="row">';
-  content += '<button class="btn waves-effect grey-text text-darken-4">Tomar todos</button>';
+  content += '<button class="btn waves-effect grey-text text-darken-4" onclick="takeAll()">Tomar todos</button>';
   content += '</div><div class="row"><div class="col s6"><span>' + timeHourMinute.value;
   if (selectDayMonth.value != "indefinidamente")
     content += '</span></div><div class="col s6"><span>' + timeDayMonth.value + ' ' + selectDayMonth.value;
