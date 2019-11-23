@@ -4,8 +4,7 @@ var comprimidos = [["Atarax", "Alergias", 10],
   ["Nasomet", "Alergias", 3],
   ["Omeprazol", "Dores", 50],
   ["Telfast", "Alergias", 39],
-  ["Xanax", "Ansiedade", 2],
-  ["Zyrtec", "Alergias", 23]];
+  ["Xanax", "Ansiedade", 2]];
 
 
 
@@ -107,12 +106,13 @@ function boxTakePill(pillName, numPills) {
 
 }
 
-function takeAll(){
+function takeAll(takeAllButton){
   var pills = document.getElementsByClassName("pillsInBox");
   for(var i = 0; i < pills.length; i++){
     var values = pills[i].value.split(" ");
     boxTakePill(values[0], values[1]);
   }
+  document.getElementById(takeAllButton).classList.add("disabled");
 }
 
 
