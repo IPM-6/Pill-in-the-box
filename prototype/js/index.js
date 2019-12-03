@@ -9,7 +9,19 @@ function validateForm() {
     document.getElementById("stock").classList.remove("hide");
     document.getElementById("compras").classList.remove("hide");
     document.getElementById("calendario").classList.remove("hide");
+    return true;
   }
+  document.getElementById("LoginErrorMessage").classList.remove("hide");
+  return false;
 }
 
 
+function showContent() {
+  document.getElementById("login").classList.add("hide");
+  document.getElementById("signin").classList.add("hide");
+  document.getElementById("name").classList.remove("hide");
+  document.getElementById("caixas").classList.remove("hide");
+  document.getElementById("stock").classList.remove("hide");
+  document.getElementById("compras").classList.remove("hide");
+  document.getElementById("calendario").classList.remove("hide");
+}
