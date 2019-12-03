@@ -549,7 +549,7 @@ and open the template in the editor.
                   </div>
 
                   <div class="input-field col s3">
-                    <input placeholder="Quantidade" id="pillAmount" type="text">
+                    <input placeholder="Quantidade" id="pillAmount" type="number" min="0" oninput="this.value=(this.value   < 0) ? (0/0) : this.value;">
                     <label for="pillAmount">Quantidade: </label>
                   </div>
                   <!--
@@ -648,13 +648,13 @@ and open the template in the editor.
                     </label>
                   </div>
                   <div class="input-field col s3">
-                    <input placeholder="Quantidade" id="pillAmountShop" type="text">
+                    <input placeholder="Quantidade" id="pillAmountShop" type="number" min="1" oninput="this.value=(this.value   < 1) ? (1/1) : this.value;">
                     <label for="pillAmount">Quantidade por caixa:
                       <span class="red-text text-darken-2">*</span>
                     </label>
                   </div>
                   <div class="input-field col s3">
-                    <input placeholder="Preço" id="pillPriceShop" type="text">
+                    <input placeholder="Preço" id="pillPriceShop" type="number" step="0.01" min="1" oninput="this.value=(this.value   < 1) ? (1/1) : this.value;">
                     <label for="pillPrice">Preço:</label>
                   </div>
                 </div>
@@ -693,7 +693,7 @@ and open the template in the editor.
                 </div>
                 <div class="row">
                   <div class="input-field col s3">
-                    <input placeholder="Quantidade" id="pillAmountBought" type="text">
+                    <input placeholder="Quantidade" id="pillAmountBought" type="number" min="1" oninput="this.value=(this.value   < 1) ? (1/1) : this.value;">
                     <label for="pillAmountBought">Quantidade:
                       <span class="red-text text-darken-2">*</span>
                     </label>
