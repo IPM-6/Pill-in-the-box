@@ -9,6 +9,8 @@ function validateForm() {
     document.getElementById("stock").classList.remove("hide");
     document.getElementById("compras").classList.remove("hide");
     document.getElementById("calendario").classList.remove("hide");
+    document.getElementById("confirmLogin").classList.add("modal-close");
+    document.getElementById("confirmLogin").click();
     return true;
   }
   document.getElementById("LoginErrorMessage").classList.remove("hide");
