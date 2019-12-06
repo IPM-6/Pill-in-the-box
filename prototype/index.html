@@ -415,12 +415,12 @@ and open the template in the editor.
               <form class="col s12">
                 <div class="row card">
                   <div class="input-field col s12">
-                    <input id="dononame" type="text" class="validate" minlength="1" maxlength="8">
+                    <input id="dononame" type="text" class="validate" pattern="[a-zA-Z]+" maxlength="8" required>
                     <label for="dononame">Nome do Utilizador</label>
                     <span class="helper-text" data-error="Errado" data-success="Certo"></span>
                   </div>
                 </div>
-                <a class="modal-close btn waves-effect grey-text text-darken-4 waves-light" onclick="newDono()">Concluido</a>
+                <a id="addNewDonoButton" class="btn waves-effect grey-text text-darken-4 waves-light" onclick="newDono()">Concluido</a>
               </form>
             </div>
           </div>

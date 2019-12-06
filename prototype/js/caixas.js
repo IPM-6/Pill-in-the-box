@@ -147,19 +147,24 @@ function addPill() {
 function newDono() {
   var newDono = document.getElementById('dononame').value;
   var content = document.getElementById('donos').innerHTML;
-  if (user % 3 == 0) {
-    content += '<tr>';
-  } else {
-    content = content.slice(0, -5);
+  if (newDono != "") {
+    if (user % 3 == 0) {
+      content += '<tr>';
+    } else {
+      content = content.slice(0, -5);
+    }
+    user += 1;
+    content += '<td><label>';
+    content += '<input id="' + newDono + '" class="donosUser" type="checkbox" checked="checked" value="'
+    content += newDono + '"  onclick="verifyUserCheckBox(' + "'" + newDono + "'" + ')"/>';
+    content += '<span>' + newDono + '</span></label></td></tr>';
+    document.getElementById('donos').innerHTML = content;
+    document.getElementById('dononame').value = "";
+    checkUsers();
+    document.getElementById("addNewDonoButton").classList.add("modal-close");
+    document.getElementById("addNewDonoButton").click();
+    document.getElementById("addNewDonoButton").classList.remove("modal-close");
   }
-  user += 1;
-  content += '<td><label>';
-  content += '<input id="' + newDono + '" class="donosUser" type="checkbox" checked="checked" value="'
-  content += newDono + '"  onclick="verifyUserCheckBox(' + "'" + newDono + "'" + ')"/>';
-  content += '<span>' + newDono + '</span></label></td></tr>';
-  document.getElementById('donos').innerHTML = content;
-  document.getElementById('dononame').value = "";
-  checkUsers();
 }
 
 function checkUsers() {
