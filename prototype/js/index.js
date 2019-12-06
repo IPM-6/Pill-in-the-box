@@ -11,6 +11,7 @@ function validateForm() {
     document.getElementById("calendario").classList.remove("hide");
     document.getElementById("confirmLogin").classList.add("modal-close");
     document.getElementById("confirmLogin").click();
+    document.getElementById("tabsOfProject").classList.remove("hide");
     return true;
   }
   document.getElementById("LoginErrorMessage").classList.remove("hide");

@@ -69,6 +69,7 @@ function addBox() {
   content += '</span></div></div></div></div></div><div class="divider"> </div>';
 
   document.getElementById('caixa').innerHTML += content;
+  document.getElementById("usersOrganizer").classList.remove("hide");
 }
 
 
