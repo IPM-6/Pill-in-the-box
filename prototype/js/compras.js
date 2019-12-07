@@ -97,9 +97,9 @@ function addNewShopPill(pillName, pillAmount, pillPrice, medicReceipt, pillSympt
   }
 
   //row with buttons
-  content = '<a class="btn-floating btn-small waves-effect waves-light green modal-trigger" href="#shopForm2"  id="\'' + pillName + '\'"><i class="material-icons">check</i></a>';
-  content += '<a class="btn-floating btn-small waves-effect waves-light red" onclick="deleteShopPill(\'' + pillName + '\')"><i class="material-icons">clear</i></a>';
-  content += '<a class="btn-floating btn-small waves-effect waves-light black modal-trigger" onclick="editShopPill()"><i class="material-icons">create</i></a>';
+  content = '<a class="btn-floating btn-small waves-effect waves-light green modal-trigger" title="Comprar comprimido" href="#shopForm2"  id="\'' + pillName + '\'"><i class="material-icons">check</i></a>';
+  content += '<a class="btn-floating btn-small waves-effect waves-light red" title="Remover comprimido" onclick="deleteShopPill(\'' + pillName + '\')"><i class="material-icons">clear</i></a>';
+  content += '<a class="btn-floating btn-small waves-effect waves-light black modal-trigger" title="Editar comprimido" onclick="editShopPill()"><i class="material-icons">create</i></a>';
   pillCol4.innerHTML = content;
 
   pillRow.appendChild(pillCol1);
